@@ -1,0 +1,8 @@
+<%= render @recipe %>
+
+<h3>Comments</h3>
+<div id='comments'>
+  <%= render @recipe.comments %>
+</div>
+
+<%= render :file => 'comments/new' %>
