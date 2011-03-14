@@ -21,7 +21,7 @@ Category.create [{:name => 'Bread'},
 
 Category.create [{:name => 'Fish'},
                 {:name => 'Shrimp'},
-                {:name => 'Salad'}]
+                {:name => 'Salad'}]              
 user.recipes.create :title => 'Test Recipe',
                 :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
                 :directions => 'Bake at 350 degrees for 1 hour',
