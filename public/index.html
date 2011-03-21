@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby on Rails: Welcome aboard</title>
+    <title>RecipeApp</title>
     <style type="text/css" media="screen">
       body {
         margin: 0;
@@ -60,10 +60,10 @@
 
 
       #header {
-        background-image: url("images/rails.png");
+        background-image: url("images/food.jpg");
         background-repeat: no-repeat;
         background-position: top left;
-        height: 64px;
+        height: 150px;
       }
       #header h1, #header h2 {margin: 0}
       #header h2 {
@@ -176,7 +176,7 @@
           { xhr = new XMLHttpRequest(); }
         else
           { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
+        xhr.open("GET","http://localhost:3000/users/new",false);
         xhr.send("");
         info.innerHTML = xhr.responseText;
         info.style.display = 'block'
@@ -188,12 +188,12 @@
       <div id="sidebar">
         <ul id="sidebar-items">
           <li>
-            <h3>Browse the documentation</h3>
+            <h3>Recipes around the world</h3>
             <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+              <li><a href="http://www.foodnetwork.com/italian-cooking-basics/package/index.html/">Italian</a></li>
+              <li><a href="http://mexicanfood.about.com/">Mexican</a></li>
+              <li><a href="http://southernfood.about.com/">Southern Cooking</a></li>
+              <li><a href="http://chinesefood.about.com/  ">Chinese</a></li>
             </ul>
           </li>
         </ul>
@@ -201,12 +201,12 @@
 
       <div id="content">
         <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
+          <h1>RecipeApp</h1>
+          <h2>You&rsquo;re resource for the world&rsquo;s best recipes!</h2>
         </div>
 
         <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
+          <h3><a href="http://localhost:3000/users/new" onclick="about(); return false">How do I sign up?</a></h3>
           <div id="about-content" style="display: none"></div>
         </div>
 
@@ -216,18 +216,18 @@
 
           <ol>
             <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
+              <h2>Create a username</h2>
+              <p>Click the "How do I sign up" link above.</p>
             </li>
 
             <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
+              <h2>Find your favourite recipe</h2>
+              <p> Where to start? Try diging through your family&rsquo;s old cookbooks!</p>
             </li>
 
             <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
+              <h2>Add your recipe</h2>
+              <p>Once you&rsquo;ve got your recipe all ready to enter, <a href="http://localhost:3000/login">login</a> and click <a href="http://localhost:3000/recipes/new">here</a>.</p>
             </li>
           </ol>
         </div>
