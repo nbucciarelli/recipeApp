@@ -1,20 +1,202 @@
-body { background-color: #fff; color: #333; }
-
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+body {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  background:url('../images/wood.jpg') no-repeat;
+  background-size:100%;
+  font-size: 80%;
+  color: #444;
+  font-family: "Bookman Old Style", "Book Antiqua", Georgia, "Times New Roman", Times, serif;
 }
 
-pre {
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+a  {
+  color: #03c;
+  text-decoration:none;
+}
+
+a:hover {
+  background-color:;
+  color: #444;
+  text-decoration:underline;
+}
+
+
+#page {
+  -moz-border-radius: 4px 4px 4px 4px;
+  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  -webkit-border-radius: 50px;
+  -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  background-color: #f0f0f0;
+  width: 750px;
+  margin: 0;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  height:auto;
+}
+
+#content1 {
+  -moz-border-radius: 4px 4px 4px 4px;
+  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  -webkit-border-radius: 50px 0px 0px 0px;
+  -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  float: left;
+  background-color: white;
+  border: none;
+  padding: 25px;
+  padding-right:0px;
+  width: 500px; 
+  height:auto;
+}
+
+#content2 {
+  -moz-border-radius: 4px 4px 4px 4px;
+  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  -webkit-border-radius: 0px 0px 0px 50px;
+  -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  float: left;
+  background-color: white;
+  border: none;
+  padding: 25px;
+  padding-right:0px;
+  width: 500px; 
+  height:auto;
+}
+
+#sidebar {
+  float: right;
+  width: 175px;
+}
+
+#footer {
+  clear: both;
+}
+
+
+#header, #signup, #getting-started {
+  padding-left: 75px;
+  padding-right: 30px;
+}
+
+p.top_image {
+  text-align: center;
+}
+#header {
+  background-image:;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+}
+#header h1, #header h2 {margin: 0;}
+#header h2 {
+  color: #444;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+
+#signup h3 {
+  margin: 0;
+}
+
+/*      #about-content {
+  background-color: #ffd;
+  border: 1px solid #fc0;
+  margin-left: -55px;
+  margin-right: -10px;
+}
+#about-content table {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  border-collapse: collapse;
+}
+#about-content td {
+  padding: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+#about-content td.name  {color: #555}
+#about-content td.value {color: #000}
+
+#about-content ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#about-content.failure {
+  background-color: #fcc;
+  border: 1px solid #f00;
+}
+#about-content.failure p {
+  margin: 0;
+  padding: 10px;
+}
+*/
+
+#getting-started {
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+  padding-top: 15px;
+}
+#getting-started h1 {
+  margin: 0;
+  font-size: 20px;
+}
+#getting-started h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 25px;
+}
+#getting-started ol {
+  margin-left: 0;
+  padding-left: 0;
+}
+#getting-started li {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 25px;
+}
+#getting-started li h2 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 18px;
+  color: #333;
+}
+#getting-started li p {
+  color: #555;
+  font-size: 13px;
+}
+
+#sidebar ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+#sidebar ul h3 {
+  margin-top: 25px;
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+#sidebar li {
+  list-style-type: none;
+}
+#sidebar ul.links li {
+  margin-bottom: 5px;
+}
+
+/*pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-}
-
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+}*/
 
 div.field, div.actions {
   margin-bottom: 10px;
