@@ -7,7 +7,8 @@
         margin: 0;
         margin-bottom: 25px;
         padding: 0;
-        background-color: #f0f0f0;
+        background:url('images/wood.jpg') no-repeat;
+        background-size:100%;
         font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
         font-size: 13px;
         color: #333;
@@ -30,17 +31,20 @@
         background-color: #f0f0f0;
         width: 750px;
         margin: 0;
+        margin-top: 5%;
         margin-left: auto;
         margin-right: auto;
+        height:auto;
       }
 
       #content {
         float: left;
         background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
+        border: none;
         padding: 25px;
-        width: 500px;
+        padding-right:0px;
+        width: 500px; 
+        height:auto;
       }
 
       #sidebar {
@@ -53,19 +57,21 @@
       }
 
 
-      #header, #about, #getting-started {
+      #header, #signup, #getting-started {
         padding-left: 75px;
         padding-right: 30px;
       }
 
-
+      p.top_image {
+        text-align: center;
+      }
       #header {
-        background-image: url("images/food.jpg");
+        background-image:;
         background-repeat: no-repeat;
-        background-position: top left;
+        background-position: center;
         height: 150px;
       }
-      #header h1, #header h2 {margin: 0}
+      #header h1, #header h2 {margin: 0;}
       #header h2 {
         color: #888;
         font-weight: normal;
@@ -73,13 +79,13 @@
       }
 
 
-      #about h3 {
+      #signup h3 {
         margin: 0;
         margin-bottom: 10px;
         font-size: 14px;
       }
 
-      #about-content {
+/*      #about-content {
         background-color: #ffd;
         border: 1px solid #fc0;
         margin-left: -55px;
@@ -112,7 +118,7 @@
         margin: 0;
         padding: 10px;
       }
-
+*/
 
       #getting-started {
         border-top: 1px solid #ccc;
@@ -170,8 +176,8 @@
 
     </style>
     <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
+      function signup() {
+        info = document.getElementById('sign_up');
         if (window.XMLHttpRequest)
           { xhr = new XMLHttpRequest(); }
         else
@@ -198,42 +204,61 @@
           </li>
         </ul>
       </div>
+      <table id="content">
+        <tr>
+          <td>
+      <!-- <div id="content"> -->
+            <p class="top_image">
+              <img src="images/food.jpg" alt="food" />
+            </p>
+          </td>
+          <td>
+            <div id="header">
+              <h1>RecipeApp</h1>
+              <h2>You&rsquo;re resource for the world&rsquo;s best recipes!</h2>
+            </div>
 
-      <div id="content">
-        <div id="header">
-          <h1>RecipeApp</h1>
-          <h2>You&rsquo;re resource for the world&rsquo;s best recipes!</h2>
-        </div>
+            <div id="signup">
+              <h3><a href="http://localhost:3000/users/new" onclick="signup(); return false">How do I sign up?</a></h3>
+              <!-- <div id="sign_up" style="display: none"></div> -->
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="sign_up" style="display: none"></div>
+          </td>
+        </tr>
+        </table>
+        <table id="content">
+        <tr>
+          <td>
+            <div id="getting-started">
+              <h1>Getting started</h1>
+              <h2>Here&rsquo;s how to get rolling:</h2>
 
-        <div id="about">
-          <h3><a href="http://localhost:3000/users/new" onclick="about(); return false">How do I sign up?</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
+              <ol>
+                <li>
+                  <h2>Create a username</h2>
+                  <p>Click the "How do I sign up" link above.</p>
+                </li>
 
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
+                <li>
+                  <h2>Find your favourite recipe</h2>
+                  <p> Where to start? Try diging through your family&rsquo;s old cookbooks!</p>
+                </li>
 
-          <ol>
-            <li>
-              <h2>Create a username</h2>
-              <p>Click the "How do I sign up" link above.</p>
-            </li>
-
-            <li>
-              <h2>Find your favourite recipe</h2>
-              <p> Where to start? Try diging through your family&rsquo;s old cookbooks!</p>
-            </li>
-
-            <li>
-              <h2>Add your recipe</h2>
-              <p>Once you&rsquo;ve got your recipe all ready to enter, <a href="http://localhost:3000/login">login</a> and click <a href="http://localhost:3000/recipes/new">here</a>.</p>
-            </li>
-          </ol>
-        </div>
+                <li>
+                  <h2>Add your recipe</h2>
+                  <p>Once you&rsquo;ve got your recipe all ready to enter, <a href="http://localhost:3000/login">login</a> and click <a href="http://localhost:3000/recipes/new">here</a>.</p>
+                </li>
+              </ol>
+            </div>
+          <td>
+        </tr>
       </div>
-
-      <div id="footer">&nbsp;</div>
+      </table>
+      <div id="footer"></div>
     </div>
   </body>
 </html>
