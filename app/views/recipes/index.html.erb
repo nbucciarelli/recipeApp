@@ -1,29 +1,13 @@
-<h1>Listing recipes</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Ingredients</th>
-    <th>Directions</th>
-    <th>Published at</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @recipes.each do |recipe| %>
-  <tr>
-    <td><%= recipe.title %></td>
-    <td><%= recipe.ingredients %></td>
-    <td><%= recipe.directions %></td>
-    <td><%= recipe.published_at %></td>
-    <td><%= link_to 'Show', recipe %></td>
-    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-    <td><%= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <p>
+    <%= recipe.title %>
+    <span style="float: right;">
+      <%= link_to 'View', recipe_path(recipe), :method => 'show' %>
+      |
+      <%= link_to 'Edit', edit_recipe_path(recipe) %>
+      |
+      <%= link_to 'Delete', recipe_path(recipe), :confirm => 'Are you sure?', :method => 'delete' %>
+    </span>
+  </p>
+  <hr />
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Recipe', new_recipe_path %>
