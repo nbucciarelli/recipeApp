@@ -1,13 +1,8 @@
-<% @recipes.each do |recipe| %>
-  <p>
-    <%= recipe.title %>
-    <span style="float: right;">
-      <%= link_to 'View', recipe_path(recipe), :method => 'show' %>
-      |
-      <%= link_to 'Edit', edit_recipe_path(recipe) %>
-      |
-      <%= link_to 'Delete', recipe, :confirm => 'Are you sure?', :method => :delete %>
-    </span>
-  </p>
-  <hr />
-<% end %>
+<h1>Recipes List</h1>
+
+<%= render 'recipe' %>
+
+<br />
+<br />
+
+<%= link_to 'New Recipe', new_recipe_path %>

@@ -1,3 +1,8 @@
+'CATEGORIES'
+'CURRENT USER'
+
+
+
 1. 'Rewrite the whole users_controller without looking. Delete it.'
 
 2. 'Make the getting started page work. Do I make a users controller action for it?'

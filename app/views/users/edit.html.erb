@@ -1,5 +1,11 @@
-<h1>Editing user</h1>
+<h1>Edit my profile</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', recipes_path %>
+<%= form_for @user do |f| %>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+  <br />
+  <%= f.label :password_confirmation %>
+  <%= f.text_field :password_confirmation %>
+  <br />
+  <%= f.submit %>
+<% end %>

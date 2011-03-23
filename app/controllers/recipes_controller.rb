@@ -27,6 +27,9 @@ class RecipesController < ApplicationController
   end
   
   def update
+    params[:recipe][:cuisine_ids] ||= []
+    params[:recipe][:course_ids] ||= []
+    
     @recipe = Recipe.find(params[:id])
     if @recipe.update_attributes(params[:recipe])
       redirect_to recipes_path

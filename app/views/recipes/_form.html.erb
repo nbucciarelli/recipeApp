@@ -1,15 +1,34 @@
 <%= form_for @recipe do |f| %>
-  <%= f.label :title %>
+  <%= f.label :title %><br />
   <%= f.text_field :title %>
   <br />
-  <%= f.label :excerpt %>
+  <br />
+  <%= f.label :excerpt %><br />
   <%= f.text_field :excerpt%>
   <br />
-  <%= f.label :ingredients %>
+  <br />
+  <%= f.label :ingredients %><br />
   <%= f.text_field :ingredients%>
   <br />
-  <%= f.label :directions %>
+  <br />
+  <%= f.label :directions %><br />
   <%= f.text_field :directions%>
+  <br />
+  <h3><%= f.label "Type of Cuisine" %></h3>
+  <% @cuisine = Cuisine.all %>
+  <% @cuisine.each do |type| %>
+    <%= check_box_tag "recipe[cuisine_ids][]", type.id, @recipe.cuisine_ids.include?(type.id), :id => dom_id(type) %>
+    <%= label_tag(:name, type.name) %>
+  <% end %>
+  <br />
+  <h3><%= f.label "Course" %></h3>
+  <% @course = Course.all %>
+  <% @course.each do |type| %>
+    <%= check_box_tag "recipe[course_ids][]", type.id, @recipe.course_ids.include?(type.id), :id => dom_id(type) %>
+    <%= label_tag(:name, type.name) %>
+  <% end %>
+  <br />
+  <br />
   <br />
   <%= f.submit %>
 <% end %>
