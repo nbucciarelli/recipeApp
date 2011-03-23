@@ -2,20 +2,7 @@
 <html>
   <head>
     <title>RecipeApp</title>
-    <link rel="stylesheet" title="main_stylesheet" href="stylesheets/scaffold.css" type="text/css">
-    <script type="text/javascript">
-      function signup() {
-        info = document.getElementById('sign_up');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","http://localhost:3000/users/new",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
+    <link rel="stylesheet" title="main_stylesheet" href="/stylesheets/recipeApp.css" type="text/css">
   </head>
   <body>
     <div id="page">
@@ -27,7 +14,13 @@
               <li><a href="http://www.foodnetwork.com/italian-cooking-basics/package/index.html/">Italian</a></li>
               <li><a href="http://mexicanfood.about.com/">Mexican</a></li>
               <li><a href="http://southernfood.about.com/">Southern Cooking</a></li>
-              <li><a href="http://chinesefood.about.com/  ">Chinese</a></li>
+              <li><a href="http://chinesefood.about.com/">Chinese</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>Create your own!</h3>
+            <ul class="links">
+              <li><a href="http://localhost:3000/recipes/new">Post a new recipe</a></li>
             </ul>
           </li>
         </ul>
@@ -35,9 +28,8 @@
       <table id="content1">
         <tr>
           <td>
-      <!-- <div id="content"> -->
             <p class="top_image">
-              <img src="images/food.jpg" alt="food" />
+              <img src="/images/food.jpg" alt="food" />
             </p>
           </td>
           <td>
@@ -47,20 +39,11 @@
             </div>
 
             <div id="signup">
-              <h3><a href="http://localhost:3000/users/new" onclick="signup(); return false">How do I sign up?</a></h3>
-              <!-- <h3><a href="http://localhost:3000/users/new">How do I sign up?</a></h3> -->
-                
-              <!--NEED TO HAVE HIDDEN YIELD HERE OR SOMETHING-->
-              
-              <!-- <div id="sign_up" style="display: none"></div> -->
+              <h3><a href="http://localhost:3000/users/new">How do I sign up?</a></h3>
             </div>
           </td>
         </tr>
-        <tr>
-          <td>
-            <div id="sign_up" style="display: none"></div>
-          </td>
-        </tr>
+
         </table>
         <table id="content2">
         <tr>
@@ -86,7 +69,7 @@
                 </li>
               </ol>
             </div>
-          <td>
+          </td>
         </tr>
       </div>
       </table>

@@ -1,8 +1,7 @@
-<%= render @recipe %>
+<h1><%= @recipe.title %></h1>
+<p><%= @recipe.excerpt %></p>
+<p><%= @recipe.ingredients %></p>
+<p><%= @recipe.directions %></p>
+<p><%= @recipe.published_at %></p>
 
-<h3>Comments</h3>
-<div id='comments'>
-  <%= render @recipe.comments %>
-</div>
-
-<%= render :file => 'comments/new' %>
+<%= link_to 'Back', recipes_path %>

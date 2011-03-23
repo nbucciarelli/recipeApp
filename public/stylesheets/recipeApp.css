@@ -63,7 +63,7 @@ a:hover {
   background-color: white;
   border: none;
   padding: 25px;
-  padding-right:0px;
+  padding-right: 25px;
   width: 500px; 
   height:auto;
 }
@@ -103,41 +103,6 @@ p.top_image {
 #signup h3 {
   margin: 0;
 }
-
-/*      #about-content {
-  background-color: #ffd;
-  border: 1px solid #fc0;
-  margin-left: -55px;
-  margin-right: -10px;
-}
-#about-content table {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 11px;
-  border-collapse: collapse;
-}
-#about-content td {
-  padding: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-#about-content td.name  {color: #555}
-#about-content td.value {color: #000}
-
-#about-content ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-#about-content.failure {
-  background-color: #fcc;
-  border: 1px solid #f00;
-}
-#about-content.failure p {
-  margin: 0;
-  padding: 10px;
-}
-*/
 
 #getting-started {
   border-top: 1px solid #ccc;
