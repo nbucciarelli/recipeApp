@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RecipeApp</title>
+    <link rel="stylesheet" title="main_stylesheet" href="/stylesheets/recipeApp.css" type="text/css">
+    <!-- <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %> -->
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>Navigation</h3>
+            <ul class="links">
+              <li><a href="http://localhost:3000/recipes">Recipes List</a></li>
+              <li><a href="http://localhost:3000/recipes/new">Post a new recipe</a></li>
+              <li><a href="http://localhost:3000/sessions/new">Log in</a></li>
+              <li><a href="http://localhost:3000/users/edit">Edit my profile</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>Recipes around the world</h3>
+            <ul class="links">
+              <li><a href="http://www.foodnetwork.com/italian-cooking-basics/package/index.html/">Italian</a></li>
+              <li><a href="http://mexicanfood.about.com/">Mexican</a></li>
+              <li><a href="http://southernfood.about.com/">Southern Cooking</a></li>
+              <li><a href="http://chinesefood.about.com/">Chinese</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>Information</h3>
+            <ul class="links">
+              <li><a href="http://localhost:3000/getting_started.html">Getting Started</a></li>
+              <li><a href="http://localhost:3000/about.html">About RecipeApp</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <table id="content1">
+        <tr>
+          <td>
+            <p class="top_image">
+              <img src="/images/food.jpg" alt="food" />
+            </p>
+          </td>
+          <td>
+            <div id="header">
+              <h1>RecipeApp</h1>
+              <h2>Your resource for the world&rsquo;s best recipes!</h2>
+            </div>
+
+            <div id="signup">
+              <h3><a href="http://localhost:3000/users/new">How do I sign up?</a></h3>
+            </div>
+          </td>
+        </tr>
+        
+        </table>
+        <table id="content2">
+        <tr>
+          <td>
+            <div id="about">
+              <h1>RecipeApp</h1>
+              <h3>History in the baking</h3>
+              <p>We are so glad you decided to stop by!</p>
+              <p>If you are reading this, odds are that either</p>
+                <ul>
+                  <li>you forgot that you told your wife you were cooking tonight and need a recipe yesterday, </li>
+                  <li>or you simply enjoy cooking and have stumbled upon this useful gem.</li>
+                </ul>
+              <p>Whether you are here on purpose or here by accident, we are glad to have you.</p>
+              <p>Warm regards, </p>
+              <h3>RecipeApp team</h2>
+            </div>
+          </td>
+        </tr>
+      </div>
+      </table>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>
