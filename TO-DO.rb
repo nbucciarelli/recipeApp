@@ -1,4 +1,6 @@
 'CURRENT USER'
+'CONNECT RECIPES TO USERS'
+'COMMENTS'
 
 1. 'Make the getting started page work. Do I make a users controller action for it?'
 
