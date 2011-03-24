@@ -10,9 +10,15 @@
     <div id="page">
       <div id="sidebar">
         <ul id="sidebar-items">
-          <li><a href="http://localhost:3000/sessions/new">Log in</a>
-            | 
-          <a href="http://localhost:3000/sessions/destroy">Log out</a></li>
+          <!-- TAKE THIS LOGIC OUT OF HERE ASAP -->
+          <% if current_user.nil? == false %>
+            <% @current_user = current_user %>
+            Welcome, <%= @current_user[:email] %>!
+            <br />
+            <a href="http://localhost:3000/sessions/destroy">Log out</a></li>
+          <% else %>
+            <li><a href="http://localhost:3000/sessions/new">Log in</a></li>
+          <% end %>
           <li>
             <h3>Navigation</h3>
             <ul class="links">
