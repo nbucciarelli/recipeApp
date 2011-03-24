@@ -27,7 +27,7 @@ a:hover {
 
 
 #page {
-  -moz-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 50px;
   -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
   -webkit-border-radius: 50px;
   -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
@@ -42,7 +42,7 @@ a:hover {
 }
 
 #content1 {
-  -moz-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 50px 0px 0px 0px;
   -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
   -webkit-border-radius: 50px 0px 0px 0px;
   -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
@@ -56,7 +56,7 @@ a:hover {
 }
 
 #content2 {
-  -moz-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 0px 0px 0px 50px;
   -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
   -webkit-border-radius: 0px 0px 0px 50px;
   -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
