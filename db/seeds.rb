@@ -8,20 +8,15 @@
 user = User.create :email => 'mary@example.com',
                    :password => 'secret',
                    :password_confirmation => 'secret'
-Category.create [{:name => 'French'},
+Cuisine.create [{:name => 'French'},
                  {:name => 'Italian'},
                  {:name => 'Mexican'},
                  {:name => 'Southern'}]
-                 
-Category.create [{:name => 'Bread'},
-                {:name => 'Pasta'},
-                {:name => 'Meats'},
-                {:name => 'Vegetables'},
-                {:name => 'Seafood'}]
 
-Category.create [{:name => 'Fish'},
-                {:name => 'Shrimp'},
-                {:name => 'Salad'}]              
+Course.create [{:name => 'Appetizer'},
+                {:name => 'Entree'},
+                {:name => 'Desert'}]
+            
 user.recipes.create :title => 'Test Recipe',
                 :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
                 :directions => 'Bake at 350 degrees for 1 hour',
