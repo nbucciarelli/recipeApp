@@ -3,6 +3,8 @@
   <head>
     <title>RecipeApp</title>
     <link rel="stylesheet" title="main_stylesheet" href="/stylesheets/recipeApp.css" type="text/css">
+    <!-- <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %> -->
   </head>
   <body>
     <div id="page">
@@ -11,7 +13,10 @@
           <li>
             <h3>Navigation</h3>
             <ul class="links">
+              <li><a href="http://localhost:3000/recipes">Recipes List</a></li>
+              <li><a href="http://localhost:3000/recipes/new">Post a new recipe</a></li>
               <li><a href="http://localhost:3000/sessions/new">Log in</a></li>
+              <li><a href="http://localhost:3000/users/edit">Edit my profile</a></li>
             </ul>
           </li>
           <li>
@@ -24,9 +29,10 @@
             </ul>
           </li>
           <li>
-            <h3>Create your own!</h3>
+            <h3>Information</h3>
             <ul class="links">
-              <li><a href="http://localhost:3000/recipes/new">Post a new recipe</a></li>
+              <li><a href="http://localhost:3000/getting_started.html">Getting Started</a></li>
+              <li><a href="http://localhost:3000/about.html">About RecipeApp</a></li>
             </ul>
           </li>
         </ul>
@@ -49,7 +55,7 @@
             </div>
           </td>
         </tr>
-
+        
         </table>
         <table id="content2">
         <tr>

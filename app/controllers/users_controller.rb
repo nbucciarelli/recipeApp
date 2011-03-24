@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
-  def updatw
+  def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       redirect_to recipes_path, :notice => 'Updated user information successfully.'
