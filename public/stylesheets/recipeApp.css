@@ -105,10 +105,14 @@ p.top_image {
   margin: 0;
 }
 
+#about {
+  
+}
+
 #getting-started {
-  border-top: 1px solid #ccc;
-  margin-top: 25px;
-  padding-top: 15px;
+/*  border-top: 1px solid #ccc;*/
+  margin-top:;
+  padding-top:;
 }
 #getting-started h1 {
   margin: 0;
