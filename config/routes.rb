@@ -7,6 +7,8 @@ RecipeApp::Application.routes.draw do
   resource :session
   match '/login' => "sessions#new", :as => "login"
   match '/logout' => "sessions#destroy", :as => "logout"
+  match '/getting_started' => "home#getting_started", :as => "getting_started"
+  match '/about' => "home#about", :as => "about"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

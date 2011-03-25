@@ -8,7 +8,7 @@
 user = User.create :email => 'mary@example.com',
                    :password => 'secret',
                    :password_confirmation => 'secret'
-user.save
+
 Cuisine.create [{:name => 'French'},
                  {:name => 'Italian'},
                  {:name => 'Mexican'},
@@ -31,7 +31,7 @@ recipe2 = Recipe.create :title => 'MaaMaa\'s Finest',
                 :published_at => Date.today
 
 recipe3 = Recipe.create :title => 'Breakfast Casserole',
-                :excerpt => 'Have you ever tasted...',
+                :excerpt => 'Have you ever tasted ...',
                 :ingredients => '12oz of this, 1 lb of this, 9 lb of this, 25 oz of that',
                 :directions => 'Bake at 425 degrees for 1 hour',
                 :published_at => Date.today

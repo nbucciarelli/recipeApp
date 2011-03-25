@@ -10,20 +10,12 @@
     <div id="page">
       <div id="sidebar">
         <ul id="sidebar-items">
-          <!-- TAKE THIS LOGIC OUT OF HERE ASAP -->
-          <% if current_user.nil? == false %>
-            <% @current_user = current_user %>
-            Welcome, <%= @current_user[:email] %>!
-            <br />
-            <a href="http://localhost:3000/sessions/destroy">Log out</a></li>
-          <% else %>
-            <li><a href="http://localhost:3000/sessions/new">Log in</a></li>
-          <% end %>
+          <%= log_in_out_links(current_user) %>
           <li>
             <h3>Navigation</h3>
             <ul class="links">
-              <li><a href="http://localhost:3000/recipes">Recipes List</a></li>
-              <li><a href="http://localhost:3000/recipes/new">Post a new recipe</a></li>
+              <li><%= link_to 'Recipes List', recipes_path %></li>
+              <li><%= link_to 'Post a new recipe', new_recipe_path %></li>
               <li><a href="http://localhost:3000/users/edit">Edit my profile</a></li>
             </ul>
           </li>
@@ -39,8 +31,8 @@
           <li>
             <h3>Information</h3>
             <ul class="links">
-              <li><a href="http://localhost:3000/getting_started.html">Getting Started</a></li>
-              <li><a href="http://localhost:3000/about.html">About RecipeApp</a></li>
+              <li><%= link_to 'Getting Started', getting_started_path %></li>
+              <li><%= link_to 'About RecipeApp', about_path %></li>
             </ul>
           </li>
         </ul>
@@ -59,7 +51,7 @@
             </div>
 
             <div id="signup">
-              <h3><a href="http://localhost:3000/users/new">How do I sign up?</a></h3>
+              <h3><%= link_to 'How do I sign up?', new_user_path %></h3>
             </div>
           </td>
         </tr>
