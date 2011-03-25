@@ -1,6 +1,4 @@
 
--1. 'Finish editing the links in applicationlayout'
-
 0. 'Add cuisine.rb actions (a controller. In future, for admins)'
 
 1. 'COMMENTS'
