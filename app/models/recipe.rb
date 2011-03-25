@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-  validates :title, :excerpt, :ingredients, :directions, :published_at, :presence => true
+  validates :title, :ingredients, :directions, :published_at, :presence => true
   
   belongs_to :user
   has_many :comments
