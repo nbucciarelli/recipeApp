@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
-user = User.create :email => 'mary@example.com',
+User.create :username => 'Mary',
+                   :email => 'mary@example.com',
                    :password => 'secret',
                    :password_confirmation => 'secret'
 
@@ -23,12 +24,12 @@ Recipe.create :title => 'Bobby\'s Hominy',
               :directions => 'Bake at 350 degrees for 1 hour',
               :published_at => Date.today
 
-recipe2 = Recipe.create :title => 'MaaMaa\'s Finest',
+Recipe.create :title => 'MaaMaa\'s Finest',
                 :ingredients => '5oz of this, 2 lbs of this, 1 lb of this, 12 oz of that',
                 :directions => 'Bake at 425 degrees for 1 hour',
                 :published_at => Date.today
 
-recipe3 = Recipe.create :title => 'Breakfast Casserole',
+Recipe.create :title => 'Breakfast Casserole',
                 :ingredients => '12oz of this, 1 lb of this, 9 lb of this, 25 oz of that',
                 :directions => 'Bake at 425 degrees for 1 hour',
                 :published_at => Date.today

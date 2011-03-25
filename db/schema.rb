@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110325014414) do
+ActiveRecord::Schema.define(:version => 20110325192800) do
 
   create_table "categorizations", :force => true do |t|
     t.integer  "recipe_id"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20110325014414) do
     t.string   "hashed_password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username"
   end
 
 end
