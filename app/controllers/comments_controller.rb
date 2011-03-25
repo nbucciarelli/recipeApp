@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_filter :load_recipe, :excerpt => :destroy
+  before_filter :load_recipe
   before_filter :authenticate, :only => :destroy
   
   def create
