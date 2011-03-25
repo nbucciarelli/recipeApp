@@ -5,7 +5,7 @@ module ApplicationHelper
         link_to('Log in', login_path)
       end
     else
-      link = "Welcome, #{current_user[:email]}!" +
+      link = "Welcome, #{current_user[:username]}!" +
       content_tag(:br) +
       content_tag(:li) do
         link_to('Log out', logout_path)
