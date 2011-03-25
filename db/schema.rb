@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110323203605) do
+ActiveRecord::Schema.define(:version => 20110325014414) do
 
   create_table "categorizations", :force => true do |t|
     t.integer  "recipe_id"
@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(:version => 20110323203605) do
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "excerpt"
     t.string   "type_of_cuisine"
     t.integer  "user_id"
   end
