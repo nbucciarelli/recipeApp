@@ -8,9 +8,12 @@ class CuisinesController < ApplicationController
     @cuisine = Cuisine.find(params[:id])
   end
   
-  def destroy
-    @recipe = Recipe.find(params[:id])
-    @recipe.destroy
+  def edit
+    
   end
   
+  def destroy
+    @cuisine = Cuisine.find(params[:id])
+    @cuisine.destroy
+  end
 end
