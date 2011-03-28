@@ -1,2 +1,2 @@
-module CuisineHelper
+module CuisinesHelper
 end

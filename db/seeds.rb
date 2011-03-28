@@ -10,14 +10,18 @@ User.create :username => 'Mary',
                    :password => 'secret',
                    :password_confirmation => 'secret'
 
-Cuisine.create [{:name => 'French'},
-                 {:name => 'Italian'},
-                 {:name => 'Mexican'},
-                 {:name => 'Southern'}]
+Cuisine.create [{:name => 'Italian'},
+                {:name => 'Mexican'},
+                {:name => 'Southern'},
+                {:name => 'Thai'},
+                {:name => 'Japanese'},
+                {:name => 'Chinese'},
+                {:name => 'French'}]
+               
 
 Course.create [{:name => 'Appetizer'},
-                {:name => 'Entree'},
-                {:name => 'Desert'}]
+              {:name => 'Entree'},
+              {:name => 'Desert'}]
             
 Recipe.create :title => 'Bobby\'s Hominy',
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
