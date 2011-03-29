@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:edit, :update]
+  before_filter :authenticate, :only => [:edit, :update, :destroy]
   layout 'application'
+  
+  def index
+    @users = User.all
+  end
   
   def show
     @user = User.find(params[:id])
@@ -30,5 +34,11 @@ class UsersController < ApplicationController
     else
       render :action => :edit
     end
+  end
+  
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_path, :notice => 'Successfully deleted user'
   end
 end
