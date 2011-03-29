@@ -14,7 +14,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.create(params[:recipe])
+    @recipe = current_user.recipes.new(params[:recipe])
     @recipe.published_at = DateTime.now
     
     if @recipe.save
@@ -25,14 +25,14 @@ class RecipesController < ApplicationController
   end
   
   def edit
-    @recipe = Recipe.find(params[:id])
+    @recipe = current_user.recipes.find(params[:id])
   end
   
   def update
     params[:recipe][:cuisine_ids] ||= []
     params[:recipe][:course_ids] ||= []
     
-    @recipe = Recipe.find(params[:id])
+    @recipe = current_user.recipes.find(params[:id])
     if @recipe.update_attributes(params[:recipe])
       redirect_to recipes_path, :notice => 'Successfully updated recipe'
     else
@@ -41,7 +41,7 @@ class RecipesController < ApplicationController
   end
   
   def destroy
-    @recipe = Recipe.find(params[:id])
+    @recipe = current_recipes.recipes.find(params[:id])
     @recipe.destroy
     redirect_to root_path, :notice => 'Successfully deleted recipe'
   end
