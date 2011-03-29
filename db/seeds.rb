@@ -14,7 +14,52 @@ User.create :username => 'Mary',
                    :email => 'mary@example.com',
                    :password => 'secret',
                    :password_confirmation => 'secret'
+                   
+User.create :username => 'Robert',
+                  :email => 'mary@example.com',
+                  :password => 'secret',
+                  :password_confirmation => 'secret'
 
+User.create :username => 'Kitty',
+                   :email => 'kitty@example.com',
+                   :password => 'secret',
+                   :password_confirmation => 'secret'
+                   
+User.create :username => 'G-Dad',
+                 :email => 'g-dad@example.com',
+                 :password => 'secret',
+                 :password_confirmation => 'secret'
+                   
+User.create :username => 'Bobby',
+                  :email => 'bobby@example.com',
+                  :password => 'secret',
+                  :password_confirmation => 'secret'
+                  
+User.create :username => 'Pam',
+                   :email => 'pam@example.com',
+                   :password => 'secret',
+                   :password_confirmation => 'secret'
+                   
+User.create :username => 'Richard',
+                  :email => 'richard@example.com',
+                  :password => 'secret',
+                  :password_confirmation => 'secret'
+                  
+User.create :username => 'Chief',
+                  :email => 'chief@example.com',
+                  :password => 'secret',
+                  :password_confirmation => 'secret'
+                  
+User.create :username => 'Sumter',
+                  :email => 'sumter@example.com',
+                  :password => 'secret',
+                  :password_confirmation => 'secret'
+                  
+User.create :username => 'Callie',
+                  :email => 'callie@example.com',
+                  :password => 'secret',
+                  :password_confirmation => 'secret'
+                  
 Cuisine.create [{:name => 'Italian'},
                 {:name => 'Mexican'},
                 {:name => 'Southern'},
