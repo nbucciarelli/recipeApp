@@ -1,0 +1,12 @@
+%h1= @recipe.title
+%p
+  %h3 Ingredients
+%p= @recipe.ingredients
+%p
+  %h3 Directions
+%p= @recipe.directions
+%p
+  %h3 Date Published
+%p= @recipe.published_at
+%br/
+= link_to 'Back', recipes_path

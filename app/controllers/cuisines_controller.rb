@@ -29,7 +29,7 @@ class CuisinesController < ApplicationController
   
   def update
     @cuisine = Cuisine.find(params[:id])
-    if @recipe.update_attributes(params[:cuisine])
+    if @cuisine.update_attributes(params[:cuisine])
       redirect_to cuisines_path, :notice => 'Successfully updated cuisine'
     else
       render :action => :new

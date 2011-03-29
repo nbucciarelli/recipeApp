@@ -1,0 +1,57 @@
+!!!
+%html
+  %head
+    %title RecipeApp
+    %link{:href => "/stylesheets/recipeApp.css", :rel => "stylesheet", :title => "main_stylesheet", :type => "text/css"}/
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    #page
+      #sidebar
+        %ul#sidebar-items
+          = log_in_out_links(current_user)
+          %li
+            %h3 Navigation
+            %ul.links
+              %li= link_to 'Home', root_path
+              %li= link_to 'Recipes List', recipes_path
+              %li= link_to 'Post a new recipe', new_recipe_path
+              %li= link_to 'Cuisines List (admin page)', cuisines_path
+              %li
+                %a{:href => "http://localhost:3000/users/edit"} Edit my profile
+          %li
+            %h3 Recipes around the world
+            %ul.links
+              %li
+                %a{:href => "http://www.foodnetwork.com/italian-cooking-basics/package/index.html/"} Italian
+              %li
+                %a{:href => "http://mexicanfood.about.com/"} Mexican
+              %li
+                %a{:href => "http://southernfood.about.com/"} Southern Cooking
+              %li
+                %a{:href => "http://chinesefood.about.com/"} Chinese
+          %li
+            %h3 Information
+            %ul.links
+              %li= link_to 'Getting Started', getting_started_path
+              %li= link_to 'About RecipeApp', about_path
+          / admin links
+      %table#content1
+        %tr
+          %td
+            %p.top_image
+              %img{:alt => "food", :src => "/images/food.jpg"}/
+          %td
+            #header
+              %h1 RecipeApp
+              %h2 Your resource for the world’s best recipes!
+            #signup
+              %h3= link_to 'How do I sign up?', new_user_path
+      %table#content2
+        %tr
+          %td
+            = content_tag :p, notice, :class => 'notice' if notice.present?
+            = content_tag :p, alert, :class => 'alert' if alert.present?
+            = yield
+      #clear
+    #clear
