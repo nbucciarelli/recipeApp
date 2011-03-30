@@ -1,15 +1,2 @@
-%h1 Edit User
-
-- form_for @user do |f|
-  = f.label :password
-  %br
-  = f.text_field :password
-  %br
-  = f.label :password_confirmation
-  %br
-  = f.text_field :password_confirmation
-  %br
-  %br
-  %br
-  %br
-  = submit_or_cancel(f)
+%h1 Edit User Information
+= render 'form'

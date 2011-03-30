@@ -18,6 +18,7 @@ module ApplicationHelper
     form.submit + " or " +
       link_to(name, 'javascript:history.go(-1);', :class => 'cancel')
   end
+
   # def admin_links(current_user)
   #   if current_user.username == 'admin'
   #     link = content_tag(:li) +
