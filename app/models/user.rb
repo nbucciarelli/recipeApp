@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
                        :presence => true,
                        :if => :password_required?
 
-  has_one :profile
+  has_one :profile, :dependent => :nullify
   has_many :recipes, :order => 'published_at DESC, title ASC',
                       :dependent => :nullify
   has_many :replies, :through => :recipes, :source => :comments

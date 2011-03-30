@@ -1,0 +1,10 @@
+-@cuisines.each do |cuisine|
+  %p
+    = link_to cuisine.name, cuisine_path(cuisine)
+    %span{:style => 'float: right;'}
+      / = link_to 'View', cuisine_path(cuisine)
+      / |
+      = link_to 'Edit', edit_cuisine_path(cuisine)
+      |
+      = link_to 'Delete', cuisine, :method => 'delete', :confirm => 'Are you sure?'
+  %hr
