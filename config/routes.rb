@@ -10,6 +10,7 @@ RecipeApp::Application.routes.draw do
   match '/logout' => "sessions#destroy", :as => "logout"
   match '/getting_started' => "home#getting_started", :as => "getting_started"
   match '/about' => "home#about", :as => "about"
+  match '/my_recipes' => "recipes#my_recipes", :as => "my_recipes"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

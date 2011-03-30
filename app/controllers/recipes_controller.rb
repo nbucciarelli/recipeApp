@@ -46,4 +46,7 @@ class RecipesController < ApplicationController
     redirect_to root_path, :notice => 'Successfully deleted recipe'
   end
   
+  def my_recipes
+    # @recipes = current_user.recipes.all
+  end
 end

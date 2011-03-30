@@ -1,0 +1,21 @@
+%h1
+  = current_user.username + '\'s ' + 'Recipes'
+%hr
+- @recipes = Recipe.all
+- @recipes.each do |recipe|
+  - if recipe.owned_by? current_user
+    %p
+      = link_to recipe.title, recipe_path(recipe)
+    %ul
+      Course
+      - @course = recipe.courses
+      - @course.each do |type|
+        %ul
+          %li= type.name
+    %ul
+      Cuisine
+      - @cuisine = recipe.cuisines
+      - @cuisine.each do |type|
+        %ul
+          %li= type.name
+    %hr

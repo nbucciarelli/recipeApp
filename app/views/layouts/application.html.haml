@@ -17,6 +17,7 @@
               %li= link_to 'Recipes List', recipes_path
               = if current_user
                 %li= link_to 'Post a new recipe', new_recipe_path
+                %li= link_to 'My Recipes', my_recipes_path
                 %li= link_to 'Cuisines List (admin page)', cuisines_path
                 %li= link_to 'Users List (admin page)', users_path
                 %li
