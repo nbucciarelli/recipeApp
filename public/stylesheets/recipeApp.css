@@ -163,6 +163,10 @@ p.top_image {
   margin-bottom: 5px;
 }
 
+#sidebar ul.links li a {
+  color: #444;
+}
+
 /*pre {
   background-color: #eee;
   padding: 10px;
