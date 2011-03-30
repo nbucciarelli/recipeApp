@@ -1,4 +1,6 @@
 
+*-1. 'Write some tests!'
+
 *0. 'Where is that damn 7 coming from?'
 
 *1. 'Figure out how profiles should work'
