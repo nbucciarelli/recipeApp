@@ -6,8 +6,6 @@ class RecipeTest < ActiveSupport::TestCase
     recipe = Recipe.new
     
     recipe.user = users(:eugene)
-    recipe.course = courses(:entree)
-    recipe.type_of_cuisine = cuisines(:mexican)
     recipe.title = 'Best recipe everrrr'
     recipe.ingredients = '1 of these and 3 of these'
     recipe.directions = 'Do this an this and this!'
@@ -16,4 +14,13 @@ class RecipeTest < ActiveSupport::TestCase
     assert recipe.save
   end
   
+  test 'should NOT create recipe' do
+    recipe = Recipe.new
+    assert !recipe.save
+  end
+  
+  test 'should find recipe' do
+    recipe_id = recipes(:best_recipe).id
+    assert_nothing_raised { Recipe.find(recipe_id) }
+  end
 end
