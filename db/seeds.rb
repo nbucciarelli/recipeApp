@@ -85,30 +85,40 @@ Course.create [{:name => 'Appetizer'},
               {:name => 'Desert'}]
             
 Recipe.create :title => 'Bobby\'s Hominy',
+              :course_ids => [2],
+              :cuisine_ids => [3],
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
               :directions => 'Bake at 350 degrees for 1 hour',
               :published_at => Date.today,
               :user_id => 5
 
 Recipe.create :title => 'MaaMaa\'s Finest',
+                :course_ids => [3],
+                :cuisine_ids => [3],
                 :ingredients => '5oz of this, 2 lbs of this, 1 lb of this, 12 oz of that',
                 :directions => 'Bake at 425 degrees for 1 hour',
                 :published_at => Date.today,
                 :user_id => 3
 
 Recipe.create :title => 'Breakfast Casserole',
+                :course_ids => [2],
+                :cuisine_ids => [3],
                 :ingredients => '12oz of this, 1 lb of this, 9 lb of this, 25 oz of that',
                 :directions => 'Bake at 425 degrees for 1 hour',
                 :published_at => Date.today,
                 :user_id => 3
                 
 Recipe.create :title => 'World\'s Best Salsa',
+              :course_ids => [1],
+              :cuisine_ids => [2],
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
               :directions => 'Bake at 350 degrees for 1 hour',
               :published_at => Date.today,
               :user_id => 11
               
-Recipe.create :title => 'Beer Baked Chicken',
+Recipe.create :title => 'Baked Chicken',
+              :course_ids => [2],
+              :cuisine_ids => [1, 2, 3, 4, 5, 6],
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
               :directions => 'Bake at 350 degrees for 1 hour',
               :published_at => Date.today,
