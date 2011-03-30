@@ -60,6 +60,17 @@ User.create :username => 'Callie',
                   :password => 'secret',
                   :password_confirmation => 'secret'
                   
+User.create :username => 'Angelica',
+                  :email => 'angelica@example.com',
+                  :password => 'secret',
+                  :password_confirmation => 'secret'
+
+Profile.create :user_id => 3,
+                :birthday => '02-03-1932',
+                :bio => 'Born and raised in...',
+                :color => 'Caucasian',
+                :twitter => 'KittyPearce'
+                  
 Cuisine.create [{:name => 'Italian'},
                 {:name => 'Mexican'},
                 {:name => 'Southern'},
@@ -76,24 +87,29 @@ Course.create [{:name => 'Appetizer'},
 Recipe.create :title => 'Bobby\'s Hominy',
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
               :directions => 'Bake at 350 degrees for 1 hour',
-              :published_at => Date.today
+              :published_at => Date.today,
+              :user_id => 5
 
 Recipe.create :title => 'MaaMaa\'s Finest',
                 :ingredients => '5oz of this, 2 lbs of this, 1 lb of this, 12 oz of that',
                 :directions => 'Bake at 425 degrees for 1 hour',
-                :published_at => Date.today
+                :published_at => Date.today,
+                :user_id => 3
 
 Recipe.create :title => 'Breakfast Casserole',
                 :ingredients => '12oz of this, 1 lb of this, 9 lb of this, 25 oz of that',
                 :directions => 'Bake at 425 degrees for 1 hour',
-                :published_at => Date.today
+                :published_at => Date.today,
+                :user_id => 3
                 
 Recipe.create :title => 'World\'s Best Salsa',
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
               :directions => 'Bake at 350 degrees for 1 hour',
-              :published_at => Date.today
+              :published_at => Date.today,
+              :user_id => 11
               
 Recipe.create :title => 'Beer Baked Chicken',
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
               :directions => 'Bake at 350 degrees for 1 hour',
-              :published_at => Date.today
+              :published_at => Date.today,
+              :user_id => 7
