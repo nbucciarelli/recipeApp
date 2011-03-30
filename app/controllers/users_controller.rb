@@ -16,8 +16,11 @@ class UsersController < ApplicationController
   
   def create
     @user = User.create(params[:user])
-    @profile = @user.create_profile(params[:profile])
-    if @user.save && @profile.save
+    #-------------------Profile stuff?????? Ask Patrick
+    # @profile = @user.create_profile(params[:profile])
+    # if @user.save && @profile.save
+    #------------------------------------------
+    if @user.save
       redirect_to root_path, :notice => 'Successfully created user'
     else
       render :action => :new
