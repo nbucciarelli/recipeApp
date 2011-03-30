@@ -5,9 +5,9 @@ class RecipeTest < ActiveSupport::TestCase
   test 'should create recipe' do
     recipe = Recipe.new
     
-    recipe.user = users(:richard)
-    # recipe.course_ids = course(:entree)
-    # recipe.cuisine_ids = cuisine(:mexican)
+    recipe.user = users(:eugene)
+    recipe.course = courses(:entree)
+    recipe.type_of_cuisine = cuisines(:mexican)
     recipe.title = 'Best recipe everrrr'
     recipe.ingredients = '1 of these and 3 of these'
     recipe.directions = 'Do this an this and this!'
