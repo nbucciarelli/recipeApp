@@ -1,9 +1,11 @@
+%hr
 - @users.each do |user|
-  = link_to user.username, user_path(user)
-  %span{:style => 'float:right;'}
-    / = link_to 'View', user_path(user)
-    / |
-    = link_to 'Edit', edit_user_path(user)
-    |
-    = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => 'delete'
-  %hr
+  %p
+    = link_to user.username, user_path(user)
+    %span{:style => 'float:right;'}
+      / = link_to 'View', user_path(user)
+      / |
+      = link_to 'Edit', edit_user_path(user)
+      |
+      = link_to 'Delete', user, :confirm => 'Are you sure?', :method => 'delete'
+    %hr
