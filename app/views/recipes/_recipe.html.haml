@@ -4,11 +4,10 @@
     = link_to recipe.title, recipe_path(recipe)
     %span{:style => 'float: right;'}
       - if recipe.owned_by? current_user
-        / = link_to 'View', recipe_path(recipe)
-        / |
         = link_to 'Edit', edit_recipe_path(recipe)
         |
         = link_to 'Delete', recipe, :method => 'delete', :confirm => 'Are you sure?'
+  %p
     %ul
       Course
       - @course = recipe.courses
@@ -21,6 +20,5 @@
       - @cuisine.each do |type|
         %ul
           %li= type.name
-    / = link_to 'View', recipe_path(recipe)
     
   %hr
