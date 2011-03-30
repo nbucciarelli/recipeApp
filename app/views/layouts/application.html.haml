@@ -15,11 +15,12 @@
             %ul.links
               %li= link_to 'Home', root_path
               %li= link_to 'Recipes List', recipes_path
-              %li= link_to 'Post a new recipe', new_recipe_path
-              %li= link_to 'Cuisines List (admin page)', cuisines_path
-              %li= link_to 'Users List (admin page)', users_path
-              %li
-                %a{:href => "http://localhost:3000/users/profile/edit"} Edit my profile
+              = if current_user
+                %li= link_to 'Post a new recipe', new_recipe_path
+                %li= link_to 'Cuisines List (admin page)', cuisines_path
+                %li= link_to 'Users List (admin page)', users_path
+                %li
+                  %a{:href => "http://localhost:3000/users/profile/edit"} Edit my profile
           %li
             %h3 Recipes around the world
             %ul.links
@@ -36,7 +37,6 @@
             %ul.links
               %li= link_to 'Getting Started', getting_started_path
               %li= link_to 'About RecipeApp', about_path
-          / admin links
       %table#content1
         %tr
           %td

@@ -1,5 +1,7 @@
 
-*1. 'How in the HELL did I make the edit my profile shit work??????'
+*0. 'Where is that damn 7 coming from?'
+
+*1. 'Figure out how profiles should work'
 
 
 2. 'Get the Sessions stuff working. This will be a challenge. CONNECT RECIPES TO USERS'

@@ -1,12 +1,18 @@
 %h1= @user.email
 %p
   %h3 Username
-%p= @user.username
+%p
+  %ul
+    %li= @user.username
 %p
   %h3 Created at
-%p= @user.created_at
+%p
+  %ul
+    %li= @user.created_at
 %p
   %h3 Updated at
-%p= @user.updated_at
+%p
+  %ul
+    %li= @user.updated_at
 %br
 = link_to 'Back', users_path

@@ -1,12 +1,32 @@
 %h1= @recipe.title
 %p
+  %h3 Course Type
+%p
+  - @course = @recipe.courses
+  - @course.each do |type|
+    %ul
+      %li= type.name
+%p
+  %h3 Cuisine Type
+%p
+  - @cuisine = @recipe.cuisines
+  - @cuisine.each do |type|
+    %ul
+      %li= type.name
+%p
   %h3 Ingredients
-%p= @recipe.ingredients
+%p
+  %ul
+    %li= @recipe.ingredients
 %p
   %h3 Directions
-%p= @recipe.directions
+%p
+  %ul
+    %li= @recipe.directions
 %p
   %h3 Date Published
-%p= @recipe.published_at
-%br/
+%p
+  %ul
+    %li= @recipe.published_at
+%br
 = link_to 'Back', recipes_path
