@@ -24,9 +24,8 @@ class RecipeTest < ActiveSupport::TestCase
   
   test 'should find a recipe' do
     recipe_id = recipes(:best_recipe).id
-    recipe = Recipe.find(recipe_id)
-    
-    assert_nothing_raised { recipe }
+
+    assert_nothing_raised { Recipe.find(recipe_id) }
   end
   
   test 'should update recipe' do
@@ -45,11 +44,6 @@ class RecipeTest < ActiveSupport::TestCase
     assert_raise(ActiveRecord::RecordNotFound) { Recipe.find(recipe.id) }
   end
   
-  #----------Is this test useless?
-  test 'should NOT destroy recipe' do
-    recipe = recipes(:best_recipe)
-    assert_nothing_raised(ActiveRecord::RecordNotFound) { Recipe.find(recipe.id) }
-  end
   
   #-----------------------------
   #---Testing Validations-------
