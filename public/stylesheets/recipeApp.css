@@ -25,6 +25,11 @@ a:hover {
   text-decoration:underline;
 }
 
+a.cancel_link {
+  color: red;
+  text-decoration:underline;
+}
+
 
 #page {
   -moz-border-radius: 50px;
