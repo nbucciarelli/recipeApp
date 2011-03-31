@@ -11,13 +11,13 @@
     %th Course
     %th Cuisine
     %tr
-      %td{:style => 'padding:25px;'}
+      %td{:style => 'padding:25px;padding-bottom:0px;'}
         - @course = recipe.courses
         - @course.each do |type|
           %i= type.name
           -if type.name.size > 1
             %br
-      %td{:style => 'padding:25px;'}
+      %td{:style => 'padding:25px;padding-bottom:0px;'}
         - @cuisine = recipe.cuisines
         - @cuisine.each do |type|
           %i= type.name
