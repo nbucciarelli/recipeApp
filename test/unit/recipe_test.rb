@@ -17,11 +17,6 @@ class RecipeTest < ActiveSupport::TestCase
     assert recipe.save
   end
   
-  test 'should NOT create recipe' do
-    recipe = Recipe.new
-    assert !recipe.save
-  end
-  
   test 'should find a recipe' do
     recipe_id = recipes(:best_recipe).id
     assert_nothing_raised { Recipe.find(recipe_id) }
@@ -30,11 +25,6 @@ class RecipeTest < ActiveSupport::TestCase
   test 'should update recipe' do
     recipe = recipes(:best_recipe)
     assert recipe.update_attributes(:title => 'Worst Recipe')
-  end
-  
-  test 'should NOT update recipe' do
-    recipe = recipes(:best_recipe)
-    assert !recipe.update_attributes(:title => '')
   end
   
   test 'should destroy recipe' do
@@ -60,6 +50,13 @@ class RecipeTest < ActiveSupport::TestCase
     assert_equal ["can't be blank"], recipe.errors[:directions]
     assert_equal ["can't be blank"], recipe.errors[:published_at]
     assert !recipe.save
+  end
+  
+  test 'should not update a recipe without ingredients' do
+    recipe = recipes(:best_recipe)
+    assert !recipe.update_attributes(:ingredients => '')
+    assert recipe.errors[:ingredients].any?
+    assert_equal ["can't be blank"], recipe.errors[:ingredients]
   end
 
 end
