@@ -36,7 +36,7 @@ class RecipesController < ApplicationController
     if @recipe.update_attributes(params[:recipe])
       redirect_to recipes_path, :notice => 'Successfully updated recipe'
     else
-      render :action => :new
+      render :action => :edit
     end
   end
   
