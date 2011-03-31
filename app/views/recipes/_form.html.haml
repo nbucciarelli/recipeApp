@@ -1,34 +1,34 @@
-=form_for @recipe do |f|
-  =f.label :title
+= form_for @recipe do |f|
+  = f.label :title
   %br
-  =f.text_field :title
-  %br
-  %br
-  =f.label :ingredients
-  %br
-  =f.text_area :ingredients
+  = f.text_field :title
   %br
   %br
-  =f.label :directions
+  = f.label :ingredients
   %br
-  =f.text_area :directions
+  = f.text_area :ingredients
+  %br
+  %br
+  = f.label :directions
+  %br
+  = f.text_area :directions
   %br
   %h3
-    =f.label "Type of Cuisine"
+    = f.label "Type of Cuisine"
   %table
     -@cuisine = Cuisine.all
     -@cuisine.each do |type|
       %tr
         %td
-          =check_box_tag "recipe[cuisine_ids][]", type.id, @recipe.cuisine_ids.include?(type.id), :id => dom_id(type)
-          =label_tag(:name, type.name)
+          = check_box_tag "recipe[cuisine_ids][]", type.id, @recipe.cuisine_ids.include?(type.id), :id => dom_id(type)
+          = label_tag(:name, type.name)
   %br
   %h3
-    =f.label "Course"
+    = f.label "Course"
   -@course = Course.all
   -@course.each do |type|
-    =check_box_tag "recipe[course_ids][]", type.id, @recipe.course_ids.include?(type.id), :id => dom_id(type)
-    =label_tag(:name, type.name)
+    = check_box_tag "recipe[course_ids][]", type.id, @recipe.course_ids.include?(type.id), :id => dom_id(type)
+    = label_tag(:name, type.name)
     %br
   %br
   %br
