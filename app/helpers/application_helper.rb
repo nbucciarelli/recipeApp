@@ -14,10 +14,10 @@ module ApplicationHelper
     link.html_safe
   end
   
-  def submit_or_cancel(form, name='Cancel')
-    form.submit + " or " +
-      link_to(name, 'javascript:history.go(-1);', :class => 'cancel')
-  end
+  # def submit_or_cancel(form, name='Cancel')
+  #   form.submit + " or " +
+  #     link_to(name, 'javascript:history.go(-1);', :class => 'cancel', :style => 'color:red;text-decoration:underline;')
+  # end
 
   # def admin_links(current_user)
   #   if current_user.username == 'admin'
