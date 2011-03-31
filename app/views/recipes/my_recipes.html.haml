@@ -6,6 +6,10 @@
   - if recipe.owned_by? current_user
     %p
       = link_to recipe.title, recipe_path(recipe)
+      %span{:style => 'float:right;'}
+        = link_to 'Edit', edit_recipe_path(recipe)
+        |
+        = link_to 'Delete', recipe, :confirm => 'Are you sure?', :method => 'delete'
     %ul
       Course
       - @course = recipe.courses
@@ -19,3 +23,4 @@
         %ul
           %li= type.name
     %hr
+    
