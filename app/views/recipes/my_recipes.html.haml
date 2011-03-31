@@ -23,4 +23,6 @@
         %ul
           %li= type.name
     %hr
-    
+- if current_user.recipes.count < 2
+  - 8.times do
+    %br

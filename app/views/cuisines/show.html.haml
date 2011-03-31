@@ -13,10 +13,7 @@
 %p
   %ul
     %li= @cuisine.updated_at
-%br
-%br
-%br
-%br
-%br
+- 8.times do
+  %br
 / =link_to 'Back', cuisines_path
 = link_to 'Back', 'javascript:history.go(-1);'
