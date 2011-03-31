@@ -4,5 +4,7 @@
   = f.text_field :name
   %br
   %br
-  = submit_or_cancel(f)
+  = f.submit
+  or
+  %a.cancel_link{ :href => cuisines_path } Cancel
   
