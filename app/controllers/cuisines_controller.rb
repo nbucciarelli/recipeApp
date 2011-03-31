@@ -32,7 +32,7 @@ class CuisinesController < ApplicationController
     if @cuisine.update_attributes(params[:cuisine])
       redirect_to cuisines_path, :notice => 'Successfully updated cuisine'
     else
-      render :action => :new
+      render :action => :edit
     end
   end
   
