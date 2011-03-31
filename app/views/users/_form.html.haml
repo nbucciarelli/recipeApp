@@ -20,5 +20,7 @@
   %br
   %br
   %br
-  = submit_or_cancel(f)
+  = f.submit
+  or
+  %a.cancel_link{ :href => root_path } Cancel
   %br
