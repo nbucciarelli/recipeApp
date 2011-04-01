@@ -30,6 +30,24 @@ a.cancel_link {
   text-decoration:underline;
 }
 
+ul.indented {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 60px;
+}
+
+.underneath {
+  font-size:10px;
+  padding-bottom:0px;
+}
+
+#picture_box {
+  width: 50px;
+  height: 46px;
+  border: 1px solid black;
+  background: url('../images/tikihut.jpg');
+  float: left;
+}
 
 #page {
   -moz-border-radius: 50px;
@@ -37,7 +55,7 @@ a.cancel_link {
   -webkit-border-radius: 50px;
   -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
   background-color: #f0f0f0;
-  width: 750px;
+  width: 768px;
   height: auto;
   margin: 0;
   margin-top: 3%;
