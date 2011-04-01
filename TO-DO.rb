@@ -12,3 +12,4 @@ ideas
 
 'description -> trunc'
 'move nav bar stuff to above folder thing'
+'will_paginate'

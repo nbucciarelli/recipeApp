@@ -49,4 +49,5 @@ class RecipesController < ApplicationController
   def my_recipes
     # @recipes = current_user.recipes.all
   end
+  
 end

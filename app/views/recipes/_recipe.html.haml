@@ -26,7 +26,7 @@
     %br
     %span.underneath
       = 'created by '
-      = link_to(recipe.user.username, root_path())
+      = link_to recipe.user.username, user_path(recipe.user)
       = ' on ' + recipe.published_at.to_s
     - if recipe != @recipes.last
       %hr
