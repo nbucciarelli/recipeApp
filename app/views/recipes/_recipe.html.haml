@@ -1,27 +1,33 @@
 %hr
 - @recipes.each do |recipe|
-  %p
+  #picture_box
+  %ul.indented
     = link_to recipe.title, recipe_path(recipe)
     %span{:style => 'float: right;'}
       - if recipe.owned_by? current_user
         = link_to 'Edit', edit_recipe_path(recipe)
         |
         = link_to 'Delete', recipe, :method => 'delete', :confirm => 'Are you sure?'
-  %table
-    %th Course
-    %th Cuisine
-    %tr
-      %td{:style => 'padding:25px;padding-bottom:0px;'}
-        - @course = recipe.courses
-        - @course.each do |type|
-          %i= type.name
-          -if type.name.size > 1
-            %br
-      %td{:style => 'padding:25px;padding-bottom:0px;'}
-        - @cuisine = recipe.cuisines
-        - @cuisine.each do |type|
-          %i= type.name
-          - if type.name.size > 1
-            %br
-    
-  %hr
+    %br
+  
+    %span.underneath
+      - @cuisine = recipe.cuisines
+      - @cuisine.each do |type|
+        = type.name
+        - if (@cuisine.count >= 2) && (type != @cuisine.last)
+          |
+    = '->'
+    %span.underneath
+      - @course = recipe.courses
+      - @course.each do |type|
+        = type.name
+        - if (@course.count >= 2) && (type != @course.last)
+          |
+    %br
+    %span.underneath
+      = 'created by '
+      = link_to(recipe.user.username, root_path())
+      = ' on ' + recipe.published_at.to_s
+    - if recipe != @recipes.last
+      %hr
+%hr
