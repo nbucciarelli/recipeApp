@@ -1,7 +1,4 @@
-
-*0. 'Where is that damn 7 coming from?'
-
-*1. 'Figure out how profiles should work'
+*-1. 'how do i sign up should not be only for users'
 
 1. 'COMMENTS'
 
@@ -10,3 +7,9 @@
 6. 'Make admin links'
 
 7. 'If you edit a cuisine/recipe/user, delete the title/name, and get a validation error, the name disappears.'
+
+
+ideas
+
+'description -> trunc'
+'move nav bar stuff to above folder thing'
