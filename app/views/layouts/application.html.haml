@@ -14,15 +14,15 @@
           %li
             %h3 Navigation
             %ul.links
-              %li= link_to 'Home', root_path
-              %li= link_to 'Recipes List', recipes_path
+              / %li= link_to 'Home', root_path
+              / %li= link_to 'Recipes List', recipes_path
               - if current_user
                 %li= link_to 'Post a new recipe', new_recipe_path
                 / %li= link_to 'My Recipes', my_recipes_path
                 %li= link_to 'Cuisines List (admin page)', cuisines_path
                 %li= link_to 'Users List (admin page)', users_path
                 %li
-                  %a{:href => "http://localhost:3000/users/profile/edit"} Edit my profile
+
           %li
             %h3 Recipes around the world
             %ul.links
@@ -49,8 +49,10 @@
               #header
                 %h1 RecipeApp
                 %h2 Your resource for the world’s best recipes!
-        %span#user_links{:style => 'margin-left:25px;'}
+        %span#user_links{:style => 'margin-left:0px;'}
           = link_to 'Home', root_path
+        %span#user_links
+          = link_to 'Recipes List', recipes_path
         = display_tabs(current_user)
       #content2
         = content_tag :p, notice, :class => 'notice' if notice.present?

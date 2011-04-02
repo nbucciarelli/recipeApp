@@ -6,7 +6,8 @@ module ApplicationHelper
       end
     else
       link = "Welcome, #{current_user[:username]}!" +
-      content_tag(:br) +
+      content_tag(:div) + #this is a temporary fix..?
+      link_to("Edit my profile", "http://localhost:3000/users/profile/edit") +
       content_tag(:li) do
         link_to 'Log out', logout_path
       end
