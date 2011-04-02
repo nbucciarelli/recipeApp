@@ -1,7 +1,7 @@
 module ApplicationHelper
   def log_in_out_links(current_user)
     if current_user.nil?
-      link = content_tag(:li) do
+      link = content_tag(:span) do
         link_to 'Log in', login_path
       end
     else
@@ -13,7 +13,35 @@ module ApplicationHelper
     end
     link.html_safe
   end
-  
+
+  def sign_up(current_user)
+    if current_user.nil?
+      link = " or " +
+      content_tag(:span) do
+        link_to 'Sign up', new_user_path
+      end
+      link.html_safe
+    end
+  end
+
+  def display_tabs(current_user)
+    if current_user
+      link = content_tag(:span, :id => 'user_links') do
+        link_to 'My Recipes', my_recipes_path
+      end
+      link.html_safe
+    end
+  end
+
+  def add_a_new_recipe(current_user)
+    if !current_user.nil?
+      link = content_tag(:span) do
+        link_to 'New Recipe', new_recipe_path
+      end
+      link.html_safe
+    end
+  end
+
   # def submit_or_cancel(form, name='Cancel')
   #   form.submit + " or " +
   #     link_to(name, 'javascript:history.go(-1);', :class => 'cancel', :style => 'color:red;text-decoration:underline;')
@@ -28,7 +56,7 @@ module ApplicationHelper
   #       link_to 'Types of Cuisine', cuisine_path
   #     end
   #   else
-  #     
+  #
   #   end
   # end
 end

@@ -8,8 +8,9 @@
   %body
     #page
       #sidebar
-        %ul#sidebar-items
+        %ul
           = log_in_out_links(current_user)
+          = sign_up(current_user)
           %li
             %h3 Navigation
             %ul.links
@@ -17,7 +18,7 @@
               %li= link_to 'Recipes List', recipes_path
               - if current_user
                 %li= link_to 'Post a new recipe', new_recipe_path
-                %li= link_to 'My Recipes', my_recipes_path
+                / %li= link_to 'My Recipes', my_recipes_path
                 %li= link_to 'Cuisines List (admin page)', cuisines_path
                 %li= link_to 'Users List (admin page)', users_path
                 %li
@@ -38,22 +39,22 @@
             %ul.links
               %li= link_to 'Getting Started', getting_started_path
               %li= link_to 'About RecipeApp', about_path
-      %table#content1
-        %tr
-          %td
-            %p.top_image
-              %img{:alt => "food", :src => "/images/food.jpg"}/
-          %td
-            #header
-              %h1 RecipeApp
-              %h2 Your resource for the world’s best recipes!
-            #signup
-              %h3= link_to 'How do I sign up?', new_user_path
-      %table#content2
-        %tr
-          %td
-            = content_tag :p, notice, :class => 'notice' if notice.present?
-            = content_tag :p, alert, :class => 'alert' if alert.present?
-            = yield
-      #clear
+      #content1
+        %table
+          %tr
+            %td
+              %p.top_image
+                %img{:alt => "food", :src => "/images/food.jpg"}/
+            %td
+              #header
+                %h1 RecipeApp
+                %h2 Your resource for the world’s best recipes!
+        %span#user_links{:style => 'margin-left:25px;'}
+          = link_to 'Home', root_path
+        = display_tabs(current_user)
+      #content2
+        = content_tag :p, notice, :class => 'notice' if notice.present?
+        = content_tag :p, alert, :class => 'alert' if alert.present?
+        = yield
+      .clear
     #clear
