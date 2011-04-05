@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :except => [:new]
+  before_filter :authenticate, :except => [:new, :show]
   layout 'application'
 
   def index
