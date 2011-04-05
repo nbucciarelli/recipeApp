@@ -20,8 +20,15 @@
       |
       %a{:href => "http://chinesefood.about.com/"} Chinese
       |
+      %a{:href => "http://chinesefood.about.com/"} Korean
+      |
       %a{:href => "http://chinesefood.about.com/"} French
-      = '------------------------------'
+      |
+      %a{:href => "http://chinesefood.about.com/"} Indian
+      |
+      %a{:href => "http://chinesefood.about.com/"} Mediterranean
+      |
+      %a{:href => "http://chinesefood.about.com/"} Greek
     #page
       #sidebar
         %ul
@@ -64,6 +71,8 @@
           = link_to 'Home', root_path, :class => 'nav_links'
         %span#user_links
           = link_to 'Recipes List', recipes_path, :class => 'nav_links'
+        %span#user_links
+          = link_to 'Post a Recipe!', new_recipe_path, :class => 'nav_links'
         = my_recipes_tab(current_user)
         = cuisines_tab(current_user)
         = users_tab(current_user)
