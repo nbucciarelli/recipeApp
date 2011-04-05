@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :except => [:new, :show]
+  before_filter :authenticate, :except => [:new, :create, :show]
   layout 'application'
 
   def index
@@ -45,4 +45,5 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to users_path, :notice => 'Successfully deleted user'
   end
+
 end
