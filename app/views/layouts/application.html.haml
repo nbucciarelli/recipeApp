@@ -7,34 +7,49 @@
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
+    #top_field
+      %a{:href => "http://www.foodnetwork.com/italian-cooking-basics/package/index.html/"} Italian
+      |
+      %a{:href => "http://mexicanfood.about.com/"} Mexican
+      |
+      %a{:href => "http://southernfood.about.com/"} Southern Cooking
+      |
+      %a{:href => "http://chinesefood.about.com/"} Thai
+      |
+      %a{:href => "http://chinesefood.about.com/"} Japanese
+      |
+      %a{:href => "http://chinesefood.about.com/"} Chinese
+      |
+      %a{:href => "http://chinesefood.about.com/"} French
+      = '------------------------------'
     #page
       #sidebar
         %ul
           = log_in_out_links(current_user)
           = sign_up(current_user)
-          %li
-            %h3 Navigation
-            %ul.links
-              / %li= link_to 'Home', root_path
-              / %li= link_to 'Recipes List', recipes_path
-              - if current_user
-                %li= link_to 'Post a new recipe', new_recipe_path
-                / %li= link_to 'My Recipes', my_recipes_path
-                / %li= link_to 'Cuisines List (admin page)', cuisines_path
-                / %li= link_to 'Users List (admin page)', users_path
-                / %li
-
-          %li
-            %h3 Recipes around the world
-            %ul.links
-              %li
-                %a{:href => "http://www.foodnetwork.com/italian-cooking-basics/package/index.html/"} Italian
-              %li
-                %a{:href => "http://mexicanfood.about.com/"} Mexican
-              %li
-                %a{:href => "http://southernfood.about.com/"} Southern Cooking
-              %li
-                %a{:href => "http://chinesefood.about.com/"} Chinese
+          / %li
+          /   %h3 Navigation
+          /   %ul.links
+          /     %li= link_to 'Home', root_path
+          /     %li= link_to 'Recipes List', recipes_path
+          /     - if current_user
+          /       %li= link_to 'Post a new recipe', new_recipe_path
+          /       %li= link_to 'My Recipes', my_recipes_path
+          /       %li= link_to 'Cuisines List (admin page)', cuisines_path
+          /       %li= link_to 'Users List (admin page)', users_path
+          /       %li
+          /
+          / %li
+          /   %h3 Recipes around the world
+          /   %ul.links
+          /     %li
+          /       %a{:href => "http://www.foodnetwork.com/italian-cooking-basics/package/index.html/"} Italian
+          /     %li
+          /       %a{:href => "http://mexicanfood.about.com/"} Mexican
+          /     %li
+          /       %a{:href => "http://southernfood.about.com/"} Southern Cooking
+          /     %li
+          /       %a{:href => "http://chinesefood.about.com/"} Chinese
           %li
             %h3 Information
             %ul.links

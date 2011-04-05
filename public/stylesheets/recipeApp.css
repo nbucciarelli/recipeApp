@@ -73,6 +73,23 @@ ul.indented {
   float: left;
 }
 
+#top_field {
+  -moz-border-radius: 0px 0px 15px 15px;
+  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  -webkit-border-radius: 0px 0px 15px 15px;
+  -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
+/*  text-align: center;*/
+  width: 1280px;
+  height: 17px;
+  background: white;
+  font-size: 90%;
+}
+
 #page {
   -moz-border-radius: 50px;
   -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
@@ -81,9 +98,8 @@ ul.indented {
   background-color: #f0f0f0;
   width: 768px;
   height: auto;
-  margin: 0;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 25px;
+  margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
 }
