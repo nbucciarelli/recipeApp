@@ -11,12 +11,22 @@
   %br
   = f.label :password
   %br
-  = f.text_field :password
+  = f.password_field :password
   %br
   %br
   = f.label :password_confirmation
   %br
-  = f.text_field :password_confirmation
+  = f.password_field :password_confirmation
+  %br
+  %br
+  = f.label :website
+  %br
+  =f.text_field :website, {:value => 'http://'}
+  %br
+  %br
+  = f.label :country
+  %br
+  = f.select :country, options_for_select(User::COUNTRIES, selected = @user.country), {:prompt => 'Please select one'}
   %br
   %br
   %br
