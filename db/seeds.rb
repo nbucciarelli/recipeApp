@@ -8,22 +8,29 @@
 User.create :username => 'admin',
                    :email => 'admin@example.com',
                    :password => 'secret',
-                   :password_confirmation => 'secret'
+                   :password_confirmation => 'secret',
+                   :country => 'Ireland'
 
-User.create :username => 'Mary',
-                   :email => 'mary@example.com',
+User.create :username => 'Jane',
+                   :email => 'Jane@example.com',
                    :password => 'secret',
-                   :password_confirmation => 'secret'
+                   :password_confirmation => 'secret',
+                   :website => 'http://www.jane.com',
+                   :country => 'Australia'
 
 User.create :username => 'Robert',
                   :email => 'mary@example.com',
                   :password => 'secret',
-                  :password_confirmation => 'secret'
+                  :password_confirmation => 'secret',
+                  :website => 'http://www.robert.com',
+                  :country => 'United States'
 
 User.create :username => 'Kitty',
                    :email => 'kitty@example.com',
                    :password => 'secret',
-                   :password_confirmation => 'secret'
+                   :password_confirmation => 'secret',
+                   :website => 'http://www.kittyblake.com',
+                   :country => 'Uganda'
 
 User.create :username => 'G-Dad',
                  :email => 'g-dad@example.com',
@@ -43,7 +50,9 @@ User.create :username => 'Pam',
 User.create :username => 'Richard',
                   :email => 'richard@example.com',
                   :password => 'secret',
-                  :password_confirmation => 'secret'
+                  :password_confirmation => 'secret',
+                  :website => 'http://www.richardbpearce.com',
+                  :country => 'Scotland'
 
 User.create :username => 'Chief',
                   :email => 'chief@example.com',
@@ -63,7 +72,9 @@ User.create :username => 'Callie',
 User.create :username => 'Angelica',
                   :email => 'angelica@example.com',
                   :password => 'secret',
-                  :password_confirmation => 'secret'
+                  :password_confirmation => 'secret',
+                  :website => 'http://www.angelicamaelissa.com',
+                  :country => 'United Kingdom'
 
 Profile.create :user_id => 3,
                 :birthday => '02-03-1932',
