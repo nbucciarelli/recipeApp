@@ -2,7 +2,8 @@
 %html
   %head
     %title RecipeApp
-    %link{:href => "/stylesheets/recipeApp.css", :rel => "stylesheet", :title => "main_stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/recipeApp.css", :rel => "stylesheet", :title => "main_stylesheet", :type => "text/css"}
+    %script{:src => "tabber.js", :type => "text/javascript"}
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
@@ -40,20 +41,17 @@
               %li= link_to 'Getting Started', getting_started_path
               %li= link_to 'About RecipeApp', about_path
       #content1
-        %table
-          %tr
-            %td
-              %p.top_image
-                %img{:alt => "food", :src => "/images/food.jpg"}/
-            %td
-              #header
-                %h1 RecipeApp
-                %h2 Your resource for the world’s best recipes!
+        %img.top_image{:alt => "food", :src => "/images/family_dinner(stretch).jpg", :width => '555px'}
+        #header
+          %h1 RecipeApp
+          %h2 Your resource for the world’s best recipes!
         %span#user_links{:style => 'margin-left:0px;'}
-          = link_to 'Home', root_path
+          = link_to 'Home', root_path, :class => 'nav_links'
         %span#user_links
-          = link_to 'Recipes List', recipes_path
-        = display_tabs(current_user)
+          = link_to 'Recipes List', recipes_path, :class => 'nav_links'
+        = my_recipes_tab(current_user)
+        = cuisines_tab(current_user)
+        = users_tab(current_user)
       #content2
         = content_tag :p, notice, :class => 'notice' if notice.present?
         = content_tag :p, alert, :class => 'alert' if alert.present?

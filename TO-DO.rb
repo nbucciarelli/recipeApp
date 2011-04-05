@@ -1,3 +1,5 @@
+0. 'make profile method in users controller for profiles'
+
 1. 'COMMENTS'
 
 (BUG)3. 'Delete confirmation coming up when user not logged in'

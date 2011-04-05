@@ -1,19 +1,19 @@
 class UsersController < ApplicationController
   before_filter :authenticate, :except => [:new]
   layout 'application'
-  
+
   def index
     @users = User.all
   end
-  
+
   def show
     @user = User.find(params[:id])
   end
-  
+
   def new
     @user = User.new
   end
-  
+
   def create
     @user = User.create(params[:user])
     #-------------------Profile stuff?????? Ask Patrick
@@ -26,11 +26,11 @@ class UsersController < ApplicationController
       render :action => :new
     end
   end
-  
+
   def edit
     @user = current_user
   end
-  
+
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
       render :action => :edit
     end
   end
-  
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy

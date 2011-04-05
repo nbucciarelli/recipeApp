@@ -8,6 +8,11 @@ gem 'rails', '3.0.5'
 gem 'mysql2'
 gem 'haml'
 
+group :development do
+  gem 'ruby-debug'
+  gem 'mongrel'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
