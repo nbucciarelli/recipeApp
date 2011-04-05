@@ -31,10 +31,10 @@ a.cancel_link {
 }
 
 a.nav_links{
-  color: #03c;
+  color: #444;
 }
 a.nav_links:hover{
-  color: #24001D;
+  color: white;
   text-decoration: none;
 }
 #user_links {
@@ -51,7 +51,7 @@ a.nav_links:hover{
   margin-right:7px;'
   border: 1px solid black;
   border-bottom: 0px;
-  background: #BFE2F9;
+  background: #fdc152;
 }
 
 ul.indented {
