@@ -71,16 +71,7 @@ a.nav_links:hover{
   background: #fdc152;
 }
 
-ul.indented {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 60px;
-}
 
-.underneath {
-  font-size: 10px;
-  padding-bottom: 0px;
-}
 
 #picture_box {
   width: 50px;
@@ -157,6 +148,17 @@ ul.indented {
   float: right;
   width: 175px;
   background:;
+}
+
+ul.indented {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 60px;
+}
+
+.underneath {
+  font-size: 10px;
+  padding-bottom: 0px;
 }
 
 .clear {
