@@ -3,11 +3,6 @@
   %head
     %title RecipeApp
     %link{:href => "/stylesheets/recipeApp.css", :rel => "stylesheet", :title => "main_stylesheet", :type => "text/css"}
-    :javascript
-      function background_change(white) {
-        var tab = document.getElementById("user_links");
-        tab.style.backgroundColor = white;
-      }
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
@@ -46,29 +41,6 @@
         %ul
           = log_in_out_links(current_user)
           = sign_up(current_user)
-          / %li
-          /   %h3 Navigation
-          /   %ul.links
-          /     %li= link_to 'Home', root_path
-          /     %li= link_to 'Recipes List', recipes_path
-          /     - if current_user
-          /       %li= link_to 'Post a new recipe', new_recipe_path
-          /       %li= link_to 'My Recipes', my_recipes_path
-          /       %li= link_to 'Cuisines List (admin page)', cuisines_path
-          /       %li= link_to 'Users List (admin page)', users_path
-          /       %li
-          /
-          / %li
-          /   %h3 Recipes around the world
-          /   %ul.links
-          /     %li
-          /       %a{:href => "http://www.foodnetwork.com/italian-cooking-basics/package/index.html/"} Italian
-          /     %li
-          /       %a{:href => "http://mexicanfood.about.com/"} Mexican
-          /     %li
-          /       %a{:href => "http://southernfood.about.com/"} Southern Cooking
-          /     %li
-          /       %a{:href => "http://chinesefood.about.com/"} Chinese
           %li
             %h3 Information
             %ul.links
@@ -79,12 +51,9 @@
         #header
           %h1 RecipeApp
           %h2 Your resource for the world’s best recipes!
-        %span#user_links{:style => 'margin-left:0px;'}
-          = link_to 'Home', root_path, :class => 'nav_links', :onclick => 'javascript:background_change("white")'
-        %span#user_links
-          = link_to 'Recipes List', recipes_path, :class => 'nav_links'
-        %span#user_links
-          = link_to 'Post a Recipe!', new_recipe_path, :class => 'nav_links'
+        = home_tab()
+        = recipes_list_tab()
+        = post_a_recipe_tab()
         = my_recipes_tab(current_user)
         = cuisines_tab(current_user)
         = users_tab(current_user)

@@ -11,6 +11,7 @@ RecipeApp::Application.routes.draw do
   match '/getting_started' => "home#getting_started", :as => "getting_started"
   match '/about' => "home#about", :as => "about"
   match '/my_recipes' => "recipes#my_recipes", :as => "my_recipes"
+  match '/list' => "recipes#list", :as => "list"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -25,9 +25,28 @@ module ApplicationHelper
     end
   end
 
+  def home_tab()
+    link = content_tag(:span, :id => 'user_tabs', :style => 'margin-left:0px;') do
+      link_to('Home', root_path, :class => 'nav_links')
+    end
+  end
+
+  def recipes_list_tab()
+    link = content_tag(:span, :id => 'user_tabs') do
+      link_to 'Recipes List', list_path, :class => 'nav_links'
+    end
+    link.html_safe
+  end
+
+  def post_a_recipe_tab()
+    link = content_tag(:span, :id => 'user_tabs') do
+      link_to 'Post a Recipe!', new_recipe_path, :class => 'nav_links'
+    end
+  end
+
   def my_recipes_tab(current_user)
     if current_user
-      link = content_tag(:span, :id => 'user_links') do
+      link = content_tag(:span, :id => 'user_tabs') do
         link_to 'My Recipes', my_recipes_path, :class => 'nav_links'
       end
       link.html_safe
@@ -36,7 +55,7 @@ module ApplicationHelper
 
   def cuisines_tab(current_user)
     if !current_user.nil? && current_user.username == 'admin'
-      link = content_tag(:span, :id => 'user_links') do
+      link = content_tag(:span, :id => 'user_tabs') do
         link_to 'Cuisines', cuisines_path, :class => 'nav_links'
       end
       link.html_safe
@@ -45,7 +64,7 @@ module ApplicationHelper
 
   def users_tab(current_user)
     if !current_user.nil? && current_user.username == 'admin'
-      link = content_tag(:span, :id => 'user_links_end') do
+      link = content_tag(:span, :id => 'user_tabs_end') do
         link_to 'Users', users_path, :class => 'nav_links'
       end
       link.html_safe

@@ -2,7 +2,7 @@ body {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
-  background:url('../images/wood.jpg') no-repeat;
+  background:url('../images/hills_light.jpg') no-repeat;
   background-size:100%;
   font-size: 80%;
   color:#444;
@@ -37,7 +37,11 @@ a.nav_links:hover{
   color: white;
   text-decoration: none;
 }
-#user_links {
+
+.active {
+  color: white;
+}
+#user_tabs {
   -moz-border-radius: 10px 10px 0px 0px;
   -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
   -webkit-border-radius: 10px 10px 0px 0px;
@@ -51,10 +55,10 @@ a.nav_links:hover{
   margin-right:7px;'
 /*  border: 1px solid black;*/
   border-bottom: 0px;
-  background: #fdc152;
+  background: #fab46c;
 }
 
-#user_links_end {
+#user_tabs_end {
   -moz-border-radius: 10px 10px 0px 0px;
   -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
   -webkit-border-radius: 10px 10px 0px 0px;

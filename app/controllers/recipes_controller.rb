@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_filter :authenticate, :except => [:index, :show]
+  before_filter :authenticate, :except => [:index, :show, :list]
 
   def index
     @recipes = Recipe.all
@@ -47,7 +47,10 @@ class RecipesController < ApplicationController
   end
 
   def my_recipes
-    # @recipes = current_user.recipes.all
+  end
+
+  def list
+    @recipes = Recipe.all
   end
 
 end
