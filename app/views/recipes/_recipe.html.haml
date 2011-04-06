@@ -16,7 +16,7 @@
         = type.name
         - if (@cuisine.count >= 2) && (type != @cuisine.last)
           |
-    = '->'
+      = '->'
     %span.underneath
       - @course = recipe.courses
       - @course.each do |type|
@@ -25,10 +25,13 @@
           |
     %br
     %span.underneath
-      = 'created by '
+      = 'submitted by '
       = link_to recipe.user.username, user_path(recipe.user)
       = ' ' + time_ago_in_words(recipe.published_at)
       = ' ago'
+    %br
+    %span.comments
+      = link_to 'comments', recipe_comments_path(recipe)
     - if recipe != @recipes.last
       %hr
 %hr

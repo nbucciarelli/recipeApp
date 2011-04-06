@@ -29,5 +29,21 @@
   %ul
     %li= @recipe.published_at
 %br
+%hr
+%h2 Comments for
+= @recipe.title
+
+- if !@comments.nil?
+  - @comments.each do |comment|
+    = comment.name
+    %br
+    = comment.body
+    %br
+    = comment.published_at
+
+%br
+%br
+= render ''
+%br
 / = link_to 'Back', recipes_path
 = link_to 'Back', :back

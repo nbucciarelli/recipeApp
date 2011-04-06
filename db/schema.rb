@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110405153718) do
+ActiveRecord::Schema.define(:version => 20110406175806) do
 
   create_table "categorizations", :force => true do |t|
     t.integer  "recipe_id"
@@ -22,11 +22,11 @@ ActiveRecord::Schema.define(:version => 20110405153718) do
 
   create_table "comments", :force => true do |t|
     t.integer  "recipe_id"
-    t.string   "name"
     t.string   "email"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username"
   end
 
   create_table "courses", :force => true do |t|

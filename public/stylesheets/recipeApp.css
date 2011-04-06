@@ -80,7 +80,7 @@ a.nav_links:hover{
   margin-right: 0px;
 /*  border: 1px solid black;*/
   border-bottom: 0px;
-  background: #fdc152;
+  background: #fab46c;
 }
 
 
@@ -171,6 +171,13 @@ ul.indented {
 .underneath {
   font-size: 10px;
   padding-bottom: 0px;
+}
+
+.comments a{
+  padding-bottom: 0px;
+  font-size: 12px;
+  color: #444;
+  font-weight: bold;
 }
 
 .clear {

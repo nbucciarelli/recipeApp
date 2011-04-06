@@ -52,5 +52,4 @@ class RecipesController < ApplicationController
   def list
     @recipes = Recipe.all
   end
-
 end
