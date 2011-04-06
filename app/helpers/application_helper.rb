@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def background
+
+  end
+
   def log_in_out_links(current_user)
     if current_user.nil?
       link = content_tag(:span) do
