@@ -30,20 +30,22 @@
     %li= @recipe.published_at
 %br
 %hr
-%h2 Comments for
-= @recipe.title
+%h2
+  = 'Comments for ' + @recipe.title
 
+- @comments = @recipe.comments.all
 - if !@comments.nil?
   - @comments.each do |comment|
-    = comment.name
+    = comment.username
     %br
     = comment.body
     %br
-    = comment.published_at
+    = time_ago_in_words(comment.created_at) + ' ago'
+- else
+  = puts 'Sorry, no dice.'
 
-%br
-%br
-= render ''
+%h3 Post a comment
+= render :partial => '/comments/new_comment_form'
 %br
 / = link_to 'Back', recipes_path
 = link_to 'Back', :back

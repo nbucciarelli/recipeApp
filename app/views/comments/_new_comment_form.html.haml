@@ -1,9 +1,4 @@
-- form_for (@recipe, @recipe.comment.new) do |f|
-  = f.label :username
-  %br
-  = f.text_field :username
-  %br
-  %br
+= form_for [@recipe, @recipe_comment] do |f|
   = f.label :body
   %br
   = f.text_area :body

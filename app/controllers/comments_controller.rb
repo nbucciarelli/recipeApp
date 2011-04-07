@@ -9,12 +9,12 @@ class CommentsController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @comment = @recipe.comment.find(params[:recipe_id])
+    @comment = @recipe.comments.find(params[:recipe_id])
   end
 
   def create
-    @comment = @recipe.comment.new(params[:id])
-    if @comment.save
+    @comment = @recipe.comments.new(params[:comment])
+    if @comment.save!
       redirect_to @recipe, :notice => 'Thank you for your comment!'
     else
       redirect_to @recipe, :alert => 'Unable to add comment :('
