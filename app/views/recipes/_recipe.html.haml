@@ -29,9 +29,10 @@
       = link_to recipe.user.username, user_path(recipe.user)
       = ' ' + time_ago_in_words(recipe.published_at)
       = ' ago'
-    %br
-    %span.comments
-      = link_to 'comments', recipe_comments_path(recipe)
-    - if recipe != @recipes.last
-      %hr
+      %br
+      - if recipe != @recipes.last
+        %hr
+      / %span.comments
+      /   = link_to 'comments', recipe_comments_path(recipe)
+
 %hr
