@@ -7,6 +7,7 @@ gem 'rails', '3.0.6'
 
 gem 'mysql2'
 gem 'haml'
+gem 'heroku'
 
 group :development do
   gem 'ruby-debug'

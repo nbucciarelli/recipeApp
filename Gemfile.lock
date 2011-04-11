@@ -32,13 +32,20 @@ GEM
     builder (2.1.2)
     cgi_multipart_eof_fix (2.5.0)
     columnize (0.3.2)
+    configuration (1.2.0)
     daemons (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     fastthread (1.0.7)
     gem_plugin (0.2.3)
     haml (3.0.25)
+    heroku (1.20.1)
+      launchy (~> 0.3.2)
+      rest-client (< 1.7.0, >= 1.4.0)
     i18n (0.5.0)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
     linecache (0.43)
     mail (2.2.15)
       activesupport (>= 2.3.6)
@@ -72,6 +79,8 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
     ruby-debug (0.10.4)
       columnize (>= 0.1)
       ruby-debug-base (~> 0.10.4.0)
@@ -87,6 +96,7 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  heroku
   mongrel
   mysql2
   rails (= 3.0.6)
