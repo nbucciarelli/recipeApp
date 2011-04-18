@@ -83,8 +83,6 @@ a.nav_links:hover{
   background: #fab46c;
 }
 
-
-
 #picture_box {
   width: 50px;
   height: 44px;
@@ -103,11 +101,16 @@ a.nav_links:hover{
   padding-left: 20px;
   margin-left: auto;
   margin-right: auto;
-/*  text-align: center;*/
+  text-align: center;
   width: 960px;
   height: 17px;
-  background: white;
+  background: white transparent;
+/*  opacity: 0.6;*/
+}
+
+#top_field_content {
   font-size: 90%;
+  font-weight:;
 }
 
 #page {
