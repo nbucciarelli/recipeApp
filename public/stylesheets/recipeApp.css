@@ -93,10 +93,30 @@ a.nav_links:hover{
 
 #top_field {
   -moz-border-radius: 0px 0px 15px 15px;
-  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
   -webkit-border-radius: 0px 0px 15px 15px;
-  -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0px;
+  width: 960px;
+  height: 17px;
+  border: 1.5px dotted #ccc;
+  border-top: none;
+}
+
+#top_field_content a {
+  position: relative;
+  font-size: 90%;
+  color: white;
+  z-index: 2;
+}
+
+#top_field_bar {
+  -moz-border-radius: 0px 0px 15px 15px;
+/*  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;*/
+  -webkit-border-radius: 0px 0px 15px 15px;
+/*  -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;*/
+  margin-top: -15px;
   padding-top: 0px;
   padding-left: 0px;
   margin-left: auto;
@@ -104,13 +124,11 @@ a.nav_links:hover{
   text-align: center;
   width: 960px;
   height: 17px;
-  background: white transparent;
-/*  opacity: 0.6;*/
-}
-
-#top_field_content {
-  font-size: 90%;
-  font-weight:;
+  background: black;
+  filter:alpha(opacity=30);
+  -moz-opacity:0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
 }
 
 #page {
