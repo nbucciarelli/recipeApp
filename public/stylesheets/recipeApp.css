@@ -68,9 +68,9 @@ a.nav_links:hover{
 
 #user_tabs_end {
   -moz-border-radius: 10px 10px 0px 0px;
-  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  -moz-box-shadow: 2px 2px 8px #757575;
   -webkit-border-radius: 10px 10px 0px 0px;
-  -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;
+  -webkit-box-shadow: 2px 2px 8px #757575;
   text-align: center;
   padding: 10px;
   padding-top: 5px;
