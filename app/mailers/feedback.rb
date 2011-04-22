@@ -1,11 +1,13 @@
 class Feedback < ActionMailer::Base
-  default :from => "RecipeApp@example.com"
-
+  default :from => "example@example.com"
+  
   def feedback(email_params, sent_at = Time.now)
-    subject "Electronic Mail: " << emails_params[:subject]
-    recipients "robertwaltonpearce@gmail.com"
+    # subject "Electronic Mail: " << 'Feedback for RecipeApp!'
+    # recipients "robertwaltonpearce@gmail.com"
+    # # name email_params[:name]
+    # ease_of_use email_params[:ease_of_use]
     # from email_params[:address]
-    sent_on sent_at
-    body :message => email_params[:body], :sender_name, email_params[:name]
+    # sent_on sent_at
+    # body
   end
 end
