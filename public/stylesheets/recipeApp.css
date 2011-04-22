@@ -176,7 +176,7 @@ a.nav_links:hover{
 /*  -webkit-border-radius: 0px 0px 0px 50px;*/
 /*  -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;*/
 
-  -moz-box-shadow: 2px 2px 8px #757575;
+  -moz-box-shadow: 2px -1px 8px #757575;
   -webkit-box-shadow: 2px 2px 8px #757575;
   float: left;
   background-color: white;

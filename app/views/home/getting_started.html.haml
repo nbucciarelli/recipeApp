@@ -3,19 +3,17 @@
 %ol
   %li
     %h3 Create a username
-    %p Click the "How do I sign up?" link above.
+    Click the "How do I sign up?" link up and to the right.
   %br
   %li
     %h3 Find your favourite recipe
-    %p Where to start? Try digging through your family’s old cookbooks!
+    Where to start? Try digging through your family’s old cookbooks!
   %br
   %li
     %h3 Add your recipe
-    %p
-      Once you’ve got your recipe all ready to enter,
-      = succeed "," do
-        %a{:href => "http://localhost:3000/login"} login
-      or if you already have, click
-      = succeed "." do
-        %a{:href => "http://localhost:3000/recipes/new"} here
+    Once you’ve got your recipe all ready to enter,
+    = link_to 'login', login_path
+    or if you already have, click
+    = succeed "." do
+      = link_to 'here', new_recipe_path
 %br
