@@ -8,7 +8,7 @@ gem 'rails', '3.0.6'
 gem 'mysql2'
 gem 'haml'
 gem 'heroku'
-gem 'mail'
+# gem 'mail'
 
 group :development do
   gem 'ruby-debug'
