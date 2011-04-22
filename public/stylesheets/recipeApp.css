@@ -135,9 +135,12 @@ a.nav_links:hover{
 
 #feedback_bar {
   position: fixed;
+  top: 40%;
+  display: block;
+  margin-top: -45px;
   float:left;
   margin-left: 0px;
-  margin-top: 17%;
+  margin-top: auto;
   margin-bottom: auto;
   width: 30px;
   height: 105px;
