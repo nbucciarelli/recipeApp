@@ -133,6 +133,18 @@ a.nav_links:hover{
   opacity: 0.3;
 }
 
+#feedback_bar {
+  position: fixed;
+  float:left;
+  margin-left: 0px;
+  margin-top: 20%;
+  margin-bottom: auto;
+  width: 30px;
+  height: 105px;
+/*  background: url('../images/feedback.jpg') no-repeat;*/
+  -moz-box-shadow: 2px 2px 8px #757575;
+}
+
 #page {
 /*  -moz-border-radius: 50px;*/
 /*  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;*/
