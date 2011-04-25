@@ -36,16 +36,16 @@
 - @comments = @recipe.comments.all
 - if !@comments.nil?
   - @comments.each do |comment|
-    = comment.username
     %br
     = comment.body
     %br
-    = time_ago_in_words(comment.created_at) + ' ago'
+    %span{:style => 'font-size: 10px;'}
+      = 'Posted ' + time_ago_in_words(comment.created_at) + ' ago by ' + comment.name + ' (' + comment.email + ')'
 - else
   = puts 'Sorry, no dice.'
 
 %h3 Post a comment
-= render :partial => '/comments/new_comment_form'
+= render '/comments/new_comment_form'
 %br
 / = link_to 'Back', recipes_path
 = link_to 'Back', :back

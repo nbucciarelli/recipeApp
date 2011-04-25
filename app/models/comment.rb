@@ -1,6 +1,6 @@
 class Comment < ActiveRecord::Base
   belongs_to :recipe
-  validates :body, :presence => true
+  validates :name, :email, :body, :presence => true
   validate :recipe_should_be_published
 
   def recipe_should_be_published
