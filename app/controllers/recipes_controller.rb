@@ -19,7 +19,7 @@ class RecipesController < ApplicationController
     @recipe.published_at = DateTime.now
 
     if @recipe.save
-      redirect_to recipes_path, :notice => 'Successfully created new recipe'
+      redirect_to recipes_path, :notice => 'Successfully created new recipe.'
     else
       render :action => :new
     end
@@ -35,7 +35,7 @@ class RecipesController < ApplicationController
 
     @recipe = current_user.recipes.find(params[:id])
     if @recipe.update_attributes(params[:recipe])
-      redirect_to recipes_path, :notice => 'Successfully updated recipe'
+      redirect_to my_recipes_path, :notice => 'Successfully updated recipe.'
     else
       render :action => :edit
     end
@@ -44,7 +44,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = current_user.recipes.find(params[:id])
     @recipe.destroy
-    redirect_to root_path, :notice => 'Successfully deleted recipe'
+    redirect_to my_recipes_path, :notice => 'Successfully deleted recipe.'
   end
 
   def my_recipes
