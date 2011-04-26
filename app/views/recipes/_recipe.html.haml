@@ -1,6 +1,7 @@
 %hr
 - @recipes.each do |recipe|
   #picture_box
+    = display_recipe_image(recipe)
   %ul.indented
     = link_to recipe.title, recipe_path(recipe)
     %span{:style => 'float: right;'}
