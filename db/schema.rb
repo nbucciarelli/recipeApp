@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110425000211) do
+ActiveRecord::Schema.define(:version => 20110426030722) do
 
   create_table "categorizations", :force => true do |t|
     t.integer  "recipe_id"
@@ -60,6 +60,10 @@ ActiveRecord::Schema.define(:version => 20110425000211) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "recipe_image_file_name"
+    t.string   "recipe_image_content_type"
+    t.integer  "recipe_image_file_size"
+    t.datetime "recipe_image_updated_at"
   end
 
   create_table "sessions", :force => true do |t|

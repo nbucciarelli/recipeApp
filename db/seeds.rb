@@ -105,6 +105,7 @@ Recipe.create :title => 'Bobby\'s Hominy',
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
               :directions => 'Bake at 350 degrees for 1 hour',
               :published_at => Date.today,
+              :recipe_image_file_name => 'chef_small.jpg',
               :user_id => 6
 
 Recipe.create :title => 'MaaMaa\'s Finest',
@@ -113,6 +114,7 @@ Recipe.create :title => 'MaaMaa\'s Finest',
                 :ingredients => '5oz of this, 2 lbs of this, 1 lb of this, 12 oz of that',
                 :directions => 'Bake at 425 degrees for 1 hour',
                 :published_at => Date.today,
+                :recipe_image_file_name => 'dog_cooking_small.jpg',
                 :user_id => 4
 
 Recipe.create :title => 'Breakfast Casserole',
@@ -121,6 +123,7 @@ Recipe.create :title => 'Breakfast Casserole',
                 :ingredients => '12oz of this, 1 lb of this, 9 lb of this, 25 oz of that',
                 :directions => 'Bake at 425 degrees for 1 hour',
                 :published_at => Date.today,
+                :recipe_image_file_name => 'family_dinner_small.jpg',
                 :user_id => 4
 
 Recipe.create :title => 'World\'s Best Salsa',
@@ -129,6 +132,7 @@ Recipe.create :title => 'World\'s Best Salsa',
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
               :directions => 'Bake at 350 degrees for 1 hour',
               :published_at => Date.today,
+              :recipe_image_file_name => 'food_small.jpg',
               :user_id => 12
 
 Recipe.create :title => 'Baked Chicken',
@@ -137,4 +141,5 @@ Recipe.create :title => 'Baked Chicken',
               :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
               :directions => 'Bake at 350 degrees for 1 hour',
               :published_at => Date.today,
+              :recipe_image_file_name => 'tikihut_small.jpg',
               :user_id => 8
