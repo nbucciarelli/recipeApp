@@ -1,19 +1,17 @@
-%h1= @user.email
+%h1= @user.username
 %p
-  %h3 Username
+  / Eventually have this as optional for the user to display this or not
+  %strong Email:
+  %br
+  = @user.email
 %p
-  %ul
-    %li= @user.username
+  %strong Created at:
+  %br
+  = @user.created_at
 %p
-  %h3 Created at
-%p
-  %ul
-    %li= @user.created_at
-%p
-  %h3 Updated at
-%p
-  %ul
-    %li= @user.updated_at
+  %strong Updated at:
+  %br
+  = @user.updated_at
 %br
 / = link_to 'Back', users_path
 = link_to 'Back', 'javascript:history.go(-1);'

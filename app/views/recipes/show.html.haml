@@ -1,46 +1,39 @@
 %h1= @recipe.title
 %p
-  Course
-%p
-  - @course = @recipe.courses
-  - @course.each do |type|
-    %ul
-      %li= type.name
-%p
-  Cuisine
-%p
+  %strong Type:
+  %br
   - @cuisine = @recipe.cuisines
   - @cuisine.each do |type|
-    %ul
-      %li= type.name
+    = type.name
+  = " -> "
+  - @course = @recipe.courses
+  - @course.each do |type|
+    = type.name
 %p
-  Ingredients
+  %strong Ingredients:
+  %br
+  = @recipe.ingredients
 %p
-  %ul
-    %li= @recipe.ingredients
+  %strong Directions:
+  %br
+  = @recipe.directions
 %p
-  Directions
-%p
-  %ul
-    %li= @recipe.directions
-%p
-  Date Published
-%p
-  %ul
-    %li= @recipe.published_at
+  %strong Published on:
+  %br
+  = @recipe.published_at
 %br
 %hr
 %h2
   = 'Comments for ' + @recipe.title
-
 - @comments = @recipe.comments.all
 - if !@comments.nil?
   - @comments.each do |comment|
-    %br
-    = comment.body
+    = "\"" + comment.body + "\""
     %br
     %span{:style => 'font-size: 10px;'}
       = 'Posted ' + time_ago_in_words(comment.created_at) + ' ago by ' + comment.name + ' (' + comment.email + ')'
+    %br
+    %br
 - else
   = puts 'Sorry, no dice.'
 
@@ -48,4 +41,4 @@
 = render '/comments/new_comment_form'
 %br
 / = link_to 'Back', recipes_path
-= link_to 'Back', :back
+/ = link_to 'Back', :back
