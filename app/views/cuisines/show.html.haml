@@ -1,18 +1,15 @@
-%h3
-  Cuisine
 %p
-  %ul
-    %li= @cuisine.name
-%h3
-  Created at
+  %strong Cuisine:
+  %br
+  = @cuisine.name
 %p
-  %ul
-    %li= @cuisine.created_at
-%h3
-  Updated at
+  %strong Created at:
+  %br
+  = @cuisine.created_at
 %p
-  %ul
-    %li= @cuisine.updated_at
+  %strong Updated at:
+  %br
+  = @cuisine.updated_at
 - 8.times do
   %br
 / =link_to 'Back', cuisines_path
