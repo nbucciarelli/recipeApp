@@ -7,8 +7,6 @@ class Recipe < ActiveRecord::Base
   has_many :courses, :through => :categorizations
   has_many :comments
 
-  attr_accessor :recipe_image_file_name
-
   default_scope order('created_at DESC')
 
   def long_title
