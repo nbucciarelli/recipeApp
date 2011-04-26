@@ -66,6 +66,15 @@ module ApplicationHelper
     end
   end
 
+  def courses_tab(current_user)
+    if !current_user.nil? && current_user.username == 'admin'
+      link = content_tag(:span, :id => 'user_tabs') do
+        link_to 'Courses', courses_path, :class => 'nav_links'
+      end
+      link.html_safe
+    end
+  end
+
   def users_tab(current_user)
     if !current_user.nil? && current_user.username == 'admin'
       link = content_tag(:span, :id => 'user_tabs_end') do
