@@ -1,0 +1,9 @@
+%hr
+- @courses.each do |course|
+  %p
+    = link_to course.name, course_path(course)
+    %span{:style => 'float:right;'}
+      = link_to 'Edit', edit_course_path(course)
+      |
+      = link_to 'Delete', course, :confirm => 'Are you sure?', :method => 'delete'
+    %hr

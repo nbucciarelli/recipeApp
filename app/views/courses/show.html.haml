@@ -1,0 +1,16 @@
+%p
+  %strong Course:
+  %br
+  = @course.name
+%p
+  %strong Created at:
+  %br
+  = @course.created_at
+%p
+  %strong Updated at:
+  %br
+  = @course.updated_at
+- 8.times do
+  %br
+/ =link_to 'Back', cuisines_path
+= link_to 'Back', 'javascript:history.go(-1);'
