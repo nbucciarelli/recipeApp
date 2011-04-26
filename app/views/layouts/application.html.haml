@@ -40,7 +40,7 @@
         #top_field_bar
     #feedback_bar
       %a{:href => feedback_path}
-        %img{:src => '../images/feedback.jpg', :alt => 'feedback'}
+        %img{:src => '../../images/feedback.jpg', :alt => 'feedback'}
     #background_header
       RecipeMe!
       %span.small_word
@@ -51,6 +51,7 @@
       = post_a_recipe_tab()
       = my_recipes_tab(current_user)
       = cuisines_tab(current_user)
+      = courses_tab(current_user)
       = users_tab(current_user)
     #page
       #sidebar
