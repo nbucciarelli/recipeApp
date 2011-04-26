@@ -4,7 +4,7 @@ module RecipesHelper
     if recipe.recipe_image_file_name.present?
       image_tag("../../images/#{recipe.recipe_image_file_name}")
     else
-      image_tag("../../images/tikihut.jpg")
+      image_tag("../../images/tikihut_small.jpg")
     end
   end
 end
