@@ -71,33 +71,33 @@ a.nav_links:hover{
   padding-bottom: 0px;
   width: 100px;
   height: 22px;
-  margin-left: 7px;
-  margin-right: 7px;
+/*  margin-left: 7px;*/
+/*  margin-right: 7px;*/
 /*  background: #fab46c;*/
 
 }
 
 #user_tabs_end {
-  -moz-border-radius: 10px 10px 0px 0px;
-  -moz-box-shadow: 2px 2px 8px #757575;
-  -webkit-border-radius: 10px 10px 0px 0px;
-  -webkit-box-shadow: 2px 2px 8px #757575;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -moz-box-shadow: 0px 2px 8px #757575;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -webkit-box-shadow: 0px 2px 8px #757575;
   text-align: center;
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 0px;
   width: 100px;
   height: 22px;
-  margin-left:7px;
-  margin-right: 0px;
-  background: #fab46c;
+/*  margin-left:7px;*/
+/*  margin-right: 0px;*/
+/*  background: #fab46c;*/
 }
 
 #picture_box {
   width: 50px;
   height: 44px;
   border: 1px solid black;
-  background: url('../images/tikihut.jpg');
+/*  background: url('../images/tikihut.jpg');*/
   float: left;
 }
 
@@ -163,9 +163,8 @@ a.nav_links:hover{
 /*  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;*/
 /*  -webkit-border-radius: 50px;*/
 /*  -webkit-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;*/
-
-  -moz-box-shadow: 2px 2px 8px #757575;
-  -webkit-box-shadow: 2px 2px 8px #757575;
+  -moz-box-shadow: 10px 10px 8px #757575;
+  -webkit-box-shadow: 10px 10px 8px #757575;
   background-color: #f0f0f0;
   width: 775px;
   height: auto;
@@ -175,6 +174,7 @@ a.nav_links:hover{
   margin-right: auto;
 }
 
+/* unused */
 #content1 {
 /*  -moz-border-radius: 50px 0px 0px 0px;*/
 /*  -moz-box-shadow: 2px 2px 8px #757575, -2px 0 8px #757575;*/
@@ -264,15 +264,21 @@ float:left;
 #background_header {
 /*  margin-left: auto;*/
 /*  margin-right: auto;*/
+  -moz-border-radius: 25px 25px 0px 0px;
+  -moz-box-shadow: 10px 10px 8px #757575;
+  -webkit-border-radius: 25px 25px 0px 0px;
+  -webkit-box-shadow: 10px 10px 8px #757575;
+
   width: 768px;
   text-align: center;
   font-size: 48px;
   font-family: "Bookman Old Style", "Book Antiqua", Georgia, "Times New Roman", Times, serif;
+  background-color: ;
   color: white;
   margin-left: auto;
   margin-right: auto;
   margin-top:	 10px;
-  border: 1px solid;
+  border: 2px solid;
   border-bottom: none;
 }
 
