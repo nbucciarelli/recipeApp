@@ -5,6 +5,7 @@ RecipeApp::Application.routes.draw do
   end
   resources :users
   resources :cuisines
+  resources :courses
   resource :session
   match '/login' => "sessions#new", :as => "login"
   match '/logout' => "sessions#destroy", :as => "logout"
