@@ -4,25 +4,41 @@
 - @recipes = Recipe.all
 - @recipes.each do |recipe|
   - if recipe.owned_by? current_user
-    %p
+    #picture_box
+      = display_recipe_image(recipe)
+    %ul.indented
       = link_to recipe.title, recipe_path(recipe)
-      %span{:style => 'float:right;'}
-        = link_to 'Edit', edit_recipe_path(recipe)
-        |
-        = link_to 'Delete', recipe, :confirm => 'Are you sure?', :method => 'delete'
-    %ul
-      Course
-      - @course = recipe.courses
-      - @course.each do |type|
-        %ul
-          %li= type.name
-    %ul
-      Cuisine
-      - @cuisine = recipe.cuisines
-      - @cuisine.each do |type|
-        %ul
-          %li= type.name
-    %hr
+      %span{:style => 'float: right;'}
+        - if recipe.owned_by? current_user
+          = link_to 'Edit', edit_recipe_path(recipe)
+          |
+          = link_to 'Delete', recipe, :method => 'delete', :confirm => 'Are you sure?'
+      %br
+
+      %span.underneath
+        - @cuisine = recipe.cuisines
+        - @cuisine.each do |type|
+          = type.name
+          - if (@cuisine.count >= 2) && (type != @cuisine.last)
+            |
+        = '->'
+      %span.underneath
+        - @course = recipe.courses
+        - @course.each do |type|
+          = type.name
+          - if (@course.count >= 2) && (type != @course.last)
+            |
+      %br
+      %span.underneath
+        = 'submitted by '
+        = link_to recipe.user.username, user_path(recipe.user)
+        = ' ' + time_ago_in_words(recipe.published_at)
+        = ' ago'
+        %br
+        - if recipe != @recipes.last
+          %hr
+        / %span.comments
+        /   = link_to 'comments', recipe_comments_path(recipe)
 - if current_user.recipes.count == 0
   - 11.times do
     %br
