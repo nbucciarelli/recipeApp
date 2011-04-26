@@ -16,27 +16,24 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(params[:user])
-    #-------------------Profile stuff?????? Ask Patrick
-    # @profile = @user.create_profile(params[:profile])
-    # if @user.save && @profile.save
-    #------------------------------------------
-    if @user.save
+    if @user.save!
       redirect_to root_path, :notice => 'Successfully created user'
     else
-      render :action => :new
+      render :new
     end
   end
 
   def edit
+    # does not take in to account if admin is trying to change details of other users.
     @user = current_user
   end
 
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to recipes_path, :notice => 'Updated user information successfully'
+      redirect_to root_path, :notice => 'Updated user information successfully'
     else
-      render :action => :edit
+      render :edit
     end
   end
 
