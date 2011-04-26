@@ -7,6 +7,8 @@ class Recipe < ActiveRecord::Base
   has_many :courses, :through => :categorizations
   has_many :comments
 
+  default_scope order('created_at DESC')
+
   def long_title
     "#{title} - #{published_at}"
   end
