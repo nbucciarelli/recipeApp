@@ -93,6 +93,24 @@ module ApplicationHelper
     end
   end
 
+  # def cuisines_and_courses
+  #   @cuisines = Cuisine.all
+  #   @cuisines.each do |cuisine|
+  #     link_to cuisine.name, root_path
+  #     if cuisine != @cuisines.last
+  #       puts '|'
+  #     end
+  #   end
+  #   puts '•'
+  #   @courses = Course.all
+  #   @courses.each do |course|
+  #     link_to course.name, root_path
+  #     if course != @courses.last
+  #       puts '|'
+  #     end
+  #   end
+  # end
+
 
   # def submit_or_cancel(form, name='Cancel')
   #   form.submit + " or " +
