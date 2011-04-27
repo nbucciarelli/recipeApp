@@ -1,3 +1,5 @@
+%span{:style => 'float:right;margin-top:15px;'}
+  %img{:src => "../../images/#{@recipe.recipe_image_file_name}", :alt => "recipe image", :width => "150px", :height => "150px"}
 %h1= @recipe.title
 %p
   %strong Type:
@@ -21,6 +23,7 @@
   %strong Published on:
   %br
   = @recipe.published_at
+.clear
 %br
 %hr
 %h2
