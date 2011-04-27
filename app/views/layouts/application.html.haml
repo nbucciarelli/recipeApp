@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title RecipeMe!(please)
+    %title RecipeMe!
     %link{:href => "/stylesheets/recipeApp.css", :rel => "stylesheet", :title => "main_stylesheet", :type => "text/css"}
     = javascript_include_tag :defaults
     = csrf_meta_tag
@@ -10,33 +10,17 @@
     #top_field
       / These will be links to category listings
       #top_field_content
-        %a{ :href => "http://www.foodnetwork.com/italian-cooking-basics/package/index.html/"} Italian
-        |
-        %a{:href => "http://mexicanfood.about.com/"} Mexican
-        |
-        %a{:href => "http://southernfood.about.com/"} Southern Cooking
-        |
-        %a{:href => "http://chinesefood.about.com/"} Thai
-        |
-        %a{:href => "http://chinesefood.about.com/"} Japanese
-        |
-        %a{:href => "http://chinesefood.about.com/"} Chinese
-        |
-        %a{:href => "http://chinesefood.about.com/"} Korean
-        |
-        %a{:href => "http://chinesefood.about.com/"} French
-        |
-        %a{:href => "http://chinesefood.about.com/"} Indian
-        |
-        %a{:href => "http://chinesefood.about.com/"} Mediterranean
-        |
-        %a{:href => "http://chinesefood.about.com/"} Greek
+        - @cuisines = Cuisine.all
+        - @cuisines.each do |cuisine|
+          = link_to cuisine.name, root_path
+          - if cuisine != @cuisines.last
+            = '|'
         •
-        %a{:href => "http://mexicanfood.about.com/"} Appetizer
-        |
-        %a{:href => "http://mexicanfood.about.com/"} Entree
-        |
-        %a{:href => "http://mexicanfood.about.com/"} Dessert
+        - @courses = Course.all
+        - @courses.each do |course|
+          = link_to course.name, root_path
+          - if course != @courses.last
+            = '|'
         #top_field_bar
     #feedback_bar
       %a{:href => feedback_path}
