@@ -2,11 +2,13 @@
 %html
   %head
     %title RecipeMe!
-    %link{:href => "/stylesheets/app.css", :rel => "stylesheet", :title => "main_stylesheet", :type => "text/css"}
+    %link{:href => "/stylesheets/recipeApp.css", :rel => "stylesheet", :title => "main_stylesheet", :type => "text/css"}
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
+    %img{:src => '../../images/hills_light.jpg', :alt => 'background image', :id => 'bg'}
     #top_field
+      / These will be links to category listings
       #top_field_content
         - @cuisines = Cuisine.all
         - @cuisines.each do |cuisine|
@@ -24,7 +26,6 @@
       %a{:href => feedback_path}
         %img{:src => '../../images/feedback.jpg', :alt => 'feedback'}
     #background_header
-      / %img{:src => '../../images/hills_light.jpg', :alt => 'background image', :id => 'bg'}
       RecipeMe!
       %span.small_word
         (please)
