@@ -143,3 +143,30 @@ Recipe.create :title => 'Baked Chicken',
               :published_at => Date.today,
               :recipe_image_file_name => 'tikihut_small.jpg',
               :user_id => 8
+
+Recipe.create :title => 'Salmon Delight',
+              :course_ids => [1],
+              :cuisine_ids => [6],
+              :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
+              :directions => 'Bake at 350 degrees for 1 hour',
+              :published_at => Date.today,
+              :recipe_image_file_name => 'chef_small.jpg',
+              :user_id => 8
+
+Recipe.create :title => 'Croissants',
+              :course_ids => [3],
+              :cuisine_ids => [5],
+              :ingredients => '1 of this, 2 of these, 1 lb of this, 1 oz of that',
+              :directions => 'Bake at 350 degrees for 1 hour',
+              :published_at => Date.today,
+              :recipe_image_file_name => 'food_small.jpg',
+              :user_id => 12
+
+Recipe.create :title => 'Eggs Benedict',
+                :course_ids => [3],
+                :cuisine_ids => [1],
+                :ingredients => '12oz of this, 1 lb of this, 9 lb of this, 25 oz of that',
+                :directions => 'Bake at 425 degrees for 1 hour',
+                :published_at => Date.today,
+                :recipe_image_file_name => 'family_dinner_small.jpg',
+                :user_id => 4
