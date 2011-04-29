@@ -26,10 +26,10 @@
 .clear
 %br
 %hr
-%h2
+%h3
   = 'Comments for ' + @recipe.title
 - @comments = @recipe.comments.all
-- if !@comments.nil?
+- unless @comments.blank?
   - @comments.each do |comment|
     = "\"" + comment.body + "\""
     %br
@@ -38,7 +38,9 @@
     %br
     %br
 - else
-  = puts 'Sorry, no dice.'
+  = "(These are not the comments you're looking for...)"
+  %br
+  %br
 
 %h3 Post a comment
 = render '/comments/new_comment_form'
