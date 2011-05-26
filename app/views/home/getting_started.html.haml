@@ -1,19 +1,19 @@
-%h1 Getting started
-%p{:style => 'color:#744A00;font-size:16px;'} Here’s how to get cooking:
-%ol
-  %li
-    %h3 Create a username
-    Click the "Sign up?" link up and to the right.
-  %br
-  %li
-    %h3 Find your favourite recipe
-    Where to start? Try digging through your family’s old cookbooks!
-  %br
-  %li
-    %h3 Add your recipe
-    Once you’ve got your recipe all ready to enter,
-    = link_to 'login', login_path
-    or if you already have, click
-    = succeed "." do
-      = link_to 'here', new_recipe_path
-%br
+%fieldset
+  %h1 Getting started
+  %p{:style => 'color:#744A00;font-size:16px;'} Here’s how to get cooking:
+  %ol
+    %li
+      %h3 Create a username
+      Click the "Sign up?" link up and to the right.
+    %br
+    %li
+      %h3 Find your favourite recipe
+      Where to start? Try digging through your family’s old cookbooks!
+    %br
+    %li
+      %h3 Add your recipe
+      Once you’ve got your recipe all ready to enter,
+      = link_to 'login', login_path
+      or if you already have, click
+      = succeed "." do
+        = link_to 'here', new_recipe_path
