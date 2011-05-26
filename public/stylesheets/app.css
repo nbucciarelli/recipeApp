@@ -150,7 +150,8 @@ a.nav_links:hover{
   -moz-opacity: 0.20;
   -khtml-opacity: 0.20;
   opacity: 0.20;
-  position: relative;
+/*  position: relative;*/
+  zoom: 1;
 }
 
 #feedback_bar {
@@ -164,8 +165,12 @@ a.nav_links:hover{
   margin-bottom: auto;
   width: 30px;
   height: 105px;
-/*  background: url('../images/feedback.jpg') no-repeat;*/
   -moz-box-shadow: 2px 2px 8px #757575;
+}
+
+#feedback_bar a {
+  text-decoration: none;
+  border: none;
 }
 
 #page {
