@@ -150,7 +150,7 @@ a.nav_links:hover{
   -moz-opacity: 0.20;
   -khtml-opacity: 0.20;
   opacity: 0.20;
-  zoom: 1;
+  position: relative;
 }
 
 #feedback_bar {
