@@ -147,11 +147,11 @@ a.nav_links:hover{
   background: black;
   filter: alpha(opacity=20);
   filter: “alpha(opacity=20)”;
-  -moz-opacity: 0.20;
-  -khtml-opacity: 0.20;
-  opacity: 0.20;
-/*  position: relative;*/
-  zoom: 1;
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2;
+/*  position: relative; adding these so that it will work in IE...*/
+/*  zoom: 1; adding so it will work in IE...*/
 }
 
 #feedback_bar {
