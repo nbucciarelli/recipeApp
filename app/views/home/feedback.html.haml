@@ -1,33 +1,34 @@
-%h3
-  Feedback
-%em
-  Please tell us about your experience with RecipeApp!
-%br
-%br
-/ = @sender_name + ' wrote: '
-/ = @message
+%fieldset
+  %h3
+    Feedback
+  %em
+    Please tell us about your experience with RecipeApp!
+  %br
+  %br
+  / = @sender_name + ' wrote: '
+  / = @message
 
-- form_tag('/email', :id => 'feedback_form') do
-  = label :email, :ease_of_use, "How easy was this app to use?"
-  %br
-  = select :email, :ease_of_use, options_for_select([['Easy'],['Okay'],['Could use some work'],['This site sucks']], selected = :ease_of_use), {:prompt => 'Please select one'}
-  %br
-  %br
-  = label :email, :name, "Name (optional)"
-  %br
-  = text_field :email, :name
-  %br
-  %br
-  = label :email, :address, "Email"
-  %br
-  = text_field :email, :address, :class => 'required email'
-  %br
-  %br
-  = label :email, :body, "Additional notes (optional)"
-  %br
-  = text_area :email, :body, :rows => 8, :cols => 50
-  %br
-  %br
-  = submit_tag "Send", :id => 'submit_email'
-  or
-  %a.cancel_link{:href => '/'} Cancel
+  - form_tag('/email', :id => 'feedback_form') do
+    = label :email, :ease_of_use, "How easy was this app to use?"
+    %br
+    = select :email, :ease_of_use, options_for_select([['Easy'],['Okay'],['Could use some work'],['This site sucks']], selected = :ease_of_use), {:prompt => 'Please select one'}
+    %br
+    %br
+    = label :email, :name, "Name (optional)"
+    %br
+    = text_field :email, :name
+    %br
+    %br
+    = label :email, :address, "Email"
+    %br
+    = text_field :email, :address, :class => 'required email'
+    %br
+    %br
+    = label :email, :body, "Additional notes (optional)"
+    %br
+    = text_area :email, :body, :rows => 8, :cols => 50
+    %br
+    %br
+    = submit_tag "Send", :id => 'submit_email'
+    or
+    %a.cancel_link{:href => '/'} Cancel

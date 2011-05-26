@@ -235,7 +235,7 @@ fieldset {
   margin-top: 15px;
 }
 
-fieldset h1{
+fieldset h1, fieldset h2, fieldset h3 {
   margin-top: 0px;
 }
 
