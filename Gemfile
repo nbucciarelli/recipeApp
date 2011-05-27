@@ -5,14 +5,14 @@ gem 'rails', '3.0.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '0.2.6'
+gem 'mysql2'
 gem 'haml'
 gem 'heroku'
 gem 'mail'
 
 group :development do
-  gem 'ruby-debug'
-  gem 'mongrel'
+  gem 'ruby-debug19'
+  # gem 'mongrel'
 end
 
 # Use unicorn as the web server
