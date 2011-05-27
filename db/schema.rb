@@ -60,7 +60,6 @@ ActiveRecord::Schema.define(:version => 20110426030722) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.string   "recipe_image_file_name"
     t.string   "recipe_image_content_type"
     t.integer  "recipe_image_file_size"
     t.datetime "recipe_image_updated_at"
