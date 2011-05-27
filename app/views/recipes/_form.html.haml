@@ -21,14 +21,14 @@
       %tr
         %td
           = check_box_tag "recipe[cuisine_ids][]", type.id, @recipe.cuisine_ids.include?(type.id), :id => dom_id(type)
-          = label_tag(:name, type.name)
+          = label_tag("cuisine_#{type.id}", type.name)
   %br
   %h3
     = f.label "Course"
   - @course = Course.all
   - @course.each do |type|
     = check_box_tag "recipe[course_ids][]", type.id, @recipe.course_ids.include?(type.id), :id => dom_id(type)
-    = label_tag(:name, type.name)
+    = label_tag("course_#{type.id}", type.name)
     %br
   %br
   %br
