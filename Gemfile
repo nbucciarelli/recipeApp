@@ -11,8 +11,7 @@ gem 'heroku'
 gem 'mail'
 
 group :development do
-  gem 'ruby-debug'
-  gem 'mongrel'
+  gem 'ruby-debug19'
 end
 
 # Use unicorn as the web server

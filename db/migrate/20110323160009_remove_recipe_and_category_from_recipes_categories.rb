@@ -1,8 +1,8 @@
 class RemoveRecipeAndCategoryFromRecipesCategories < ActiveRecord::Migration
   def self.up
-    remove_column :recipes_categories, :recipe
-    remove_column :recipes_categories, :category
+    remove_column :recipes_categories, :recipe_id
     add_column :recipes_categories, :name, :string
+    remove_column :recipes_categories, :category_id
   end
 
   def self.down
